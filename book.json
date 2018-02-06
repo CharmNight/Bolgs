@@ -1,6 +1,6 @@
 {
-    "author": "CharmNight"
-    "description": "my notes",
+    "author": "CharmNight",
+    "description": "blogs",
     "extension": null,
     "generator": "site",
     "links": {
@@ -32,6 +32,6 @@
         "-sharing",
         "search"
     ],
-    "title": "book",
+    "title": "Poppy",
     "variables": {}
 }
