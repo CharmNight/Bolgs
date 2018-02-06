@@ -1,0 +1,16 @@
+language: "node_js"
+node_js:
+  - "node"
+install:
+  - "npm install gitbook -g"
+  - "npm install -g gitbook-cli"
+branches:
+  only:
+    - master
+env:
+  global:
+    - GH_REF: github.com/CharmNight/Bolgs.git
+#sudo: false
+script:
+  - bash summary_create.sh
+  - travis_wait 100 bash deploy.sh
