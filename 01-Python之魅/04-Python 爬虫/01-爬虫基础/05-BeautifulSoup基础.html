@@ -1,0 +1,1153 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>BeautifulSoup基础 · Poppy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="CharmNight">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06-pyquery基础.html" />
+    
+    
+    <link rel="prev" href="04-正则表达式练习.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../SUMMARY.html">
+            
+                <a href="../../../SUMMARY.html">
+            
+                    
+                    SUMMARY
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Python之魅
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../01-Python Base/">
+            
+                <a href="../../01-Python Base/">
+            
+                    
+                    Python Base
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../01-Python Base/01-Python基础之魔术方法小结.html">
+            
+                <a href="../../01-Python Base/01-Python基础之魔术方法小结.html">
+            
+                    
+                    Python基础之魔术方法小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../02-Python Advanced/">
+            
+                <a href="../../02-Python Advanced/">
+            
+                    
+                    Python Advanced
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../02-Python Advanced/01-Python 解密/01- Python之魅——random.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/01- Python之魅——random.html">
+            
+                    
+                     Python之魅——random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../02-Python Advanced/01-Python 解密/02- Python之魅——bisect.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/02- Python之魅——bisect.html">
+            
+                    
+                     Python之魅——bisect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../02-Python Advanced/01-Python 解密/03- Python之魅——ctypes.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/03- Python之魅——ctypes.html">
+            
+                    
+                     Python之魅——ctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../02-Python Advanced/01-Python 解密/readme.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/readme.html">
+            
+                    
+                    readme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../03-Django/">
+            
+                <a href="../../03-Django/">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Python 爬虫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    爬虫基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1.1" data-path="01-爬虫基础概念.html">
+            
+                <a href="01-爬虫基础概念.html">
+            
+                    
+                    爬虫基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.2" data-path="02-Urllib库基础.html">
+            
+                <a href="02-Urllib库基础.html">
+            
+                    
+                    Urllib库基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.3" data-path="03-Requests库.html">
+            
+                <a href="03-Requests库.html">
+            
+                    
+                    Requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.4" data-path="04-正则表达式练习.html">
+            
+                <a href="04-正则表达式练习.html">
+            
+                    
+                    正则表达式练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4.1.5" data-path="05-BeautifulSoup基础.html">
+            
+                <a href="05-BeautifulSoup基础.html">
+            
+                    
+                    BeautifulSoup基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.6" data-path="06-pyquery基础.html">
+            
+                <a href="06-pyquery基础.html">
+            
+                    
+                    pyquery基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.7" data-path="07-Selenium基础.html">
+            
+                <a href="07-Selenium基础.html">
+            
+                    
+                    Selenium基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../02-爬虫练习/">
+            
+                <a href="../02-爬虫练习/">
+            
+                    
+                    爬虫练习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.2.1" data-path="../02-爬虫练习/Python爬取百度图库.html">
+            
+                <a href="../02-爬虫练习/Python爬取百度图库.html">
+            
+                    
+                    Python爬取百度图库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2.2" data-path="../02-爬虫练习/selenium小玩具.html">
+            
+                <a href="../02-爬虫练习/selenium小玩具.html">
+            
+                    
+                    selenium小玩具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../02-MySQl数据库/">
+            
+                <a href="../../../02-MySQl数据库/">
+            
+                    
+                    MySQl数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../02-MySQl数据库/01-mysql数据库安装.html">
+            
+                <a href="../../../02-MySQl数据库/01-mysql数据库安装.html">
+            
+                    
+                    mysql数据库安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../02-MySQl数据库/02-mysql数据库基础操作.html">
+            
+                <a href="../../../02-MySQl数据库/02-mysql数据库基础操作.html">
+            
+                    
+                    mysql数据库基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../02-MySQl数据库/03-SQL逻辑查询语句执行顺序.html">
+            
+                <a href="../../../02-MySQl数据库/03-SQL逻辑查询语句执行顺序.html">
+            
+                    
+                    SQL逻辑查询语句执行顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../02-MySQl数据库/04-mysql约束.html">
+            
+                <a href="../../../02-MySQl数据库/04-mysql约束.html">
+            
+                    
+                    mysql约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../../02-MySQl数据库/05-mysql全家桶.html">
+            
+                <a href="../../../02-MySQl数据库/05-mysql全家桶.html">
+            
+                    
+                    mysql全家桶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../../02-MySQl数据库/06-mysql索引.html">
+            
+                <a href="../../../02-MySQl数据库/06-mysql索引.html">
+            
+                    
+                    mysql索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../../02-MySQl数据库/07-mysql慢查询日志.html">
+            
+                <a href="../../../02-MySQl数据库/07-mysql慢查询日志.html">
+            
+                    
+                    mysql慢查询日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >BeautifulSoup基础</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="beautifulsoup">BeautifulSoup</h1>
+<p>&#x65B9;&#x4FBF;&#x53C8;&#x7075;&#x6D3B;&#x7684;&#x7F51;&#x9875;&#x89E3;&#x6790;&#x5E93;&#xFF0C;&#x5904;&#x7406;&#x9AD8;&#x6548;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x89E3;&#x6790;&#x5668;&#x3002;</p>
+<p>&#x5229;&#x7528;&#x5B83;&#x4E0D;&#x7528;&#x7F16;&#x5199;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5373;&#x53EF;&#x65B9;&#x4FBF;&#x7684;&#x5B9E;&#x73B0;&#x7F51;&#x9875;&#x4FE1;&#x606F;&#x7684;&#x63D0;&#x53D6;</p>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;&lt;head&gt;
+&lt;body&gt;
+&lt;p class=&apos;title&apos; name=&apos;dromouse&apos;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;
+
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+print(soup.prettify()) <span class="hljs-comment"># &#x683C;&#x5F0F;&#x5316;&#x4EE3;&#x7801;&#xFF0C;&#x81EA;&#x52A8;&#x5C06;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x8865;&#x5168;</span>
+print(soup.title.string)
+</code></pre>
+<pre><code>&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;
+   The Dormouse&apos;s story
+  &lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p class=&quot;title&quot; name=&quot;dromouse&quot;&gt;
+   &lt;b&gt;
+    The Dormouse&apos;s story
+   &lt;/b&gt;
+  &lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+The Dormouse&apos;s story
+</code></pre><h3 id="&#x9009;&#x62E9;&#x5143;&#x7D20;">&#x9009;&#x62E9;&#x5143;&#x7D20;</h3>
+<p>&#x53EA;&#x9009;&#x62E9;&#x7B2C;&#x4E00;&#x4E2A;</p>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;&lt;head&gt;
+&lt;body&gt;
+&lt;p class=&apos;title&apos; name=&apos;dromouse&apos;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;
+
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+print(soup.title)
+print(type(soup.title))
+print(soup.head)
+print(soup.p)
+</code></pre>
+<pre><code>&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;
+&lt;class &apos;bs4.element.Tag&apos;&gt;
+&lt;head&gt;&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;
+&lt;/head&gt;
+&lt;p class=&quot;title&quot; name=&quot;dromouse&quot;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;
+</code></pre><h3 id="&#x83B7;&#x53D6;&#x5C5E;&#x6027;">&#x83B7;&#x53D6;&#x5C5E;&#x6027;</h3>
+<pre><code>.attrs[&apos;&#x5C5E;&#x6027;&#x540D;&apos;]
+[&apos;&#x5C5E;&#x6027;&#x540D;&apos;]
+</code></pre><pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;&lt;head&gt;
+&lt;body&gt;
+&lt;p class=&apos;title&apos; name=&apos;dromouse&apos;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;
+
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+print(soup.p.attrs[<span class="hljs-string">&apos;name&apos;</span>])
+print(soup.p[<span class="hljs-string">&apos;name&apos;</span>])
+</code></pre>
+<pre><code>dromouse
+dromouse
+</code></pre><h3 id="&#x83B7;&#x53D6;&#x5185;&#x5BB9;">&#x83B7;&#x53D6;&#x5185;&#x5BB9;</h3>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;&lt;head&gt;
+&lt;body&gt;
+&lt;p class=&apos;title&apos; name=&apos;dromouse&apos;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;
+
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+print(soup.p.string)
+print(soup.p.text)
+</code></pre>
+<pre><code>The Dormouse&apos;s story
+The Dormouse&apos;s story
+</code></pre><h3 id="&#x5D4C;&#x5165;&#x9009;&#x62E9;">&#x5D4C;&#x5165;&#x9009;&#x62E9;</h3>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;&lt;head&gt;
+&lt;body&gt;
+&lt;p class=&apos;title&apos; name=&apos;dromouse&apos;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;
+
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+print(soup.head.title.string)
+</code></pre>
+<pre><code>The Dormouse&apos;s story
+</code></pre><h3 id="&#x5B50;&#x8282;&#x70B9;&#x548C;&#x5B50;&#x5B59;&#x8282;&#x70B9;">&#x5B50;&#x8282;&#x70B9;&#x548C;&#x5B50;&#x5B59;&#x8282;&#x70B9;</h3>
+<pre><code>contents &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;
+children &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;
+descendants &#x8FD4;&#x56DE;&#x6240;&#x6709;&#x5B50;&#x5B59;&#x8282;&#x70B9;
+</code></pre><pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;&lt;head&gt;
+&lt;body&gt;
+&lt;p class=&apos;title&apos; name=&apos;dromouse&apos;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;
+
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+print(soup.p.contents)
+</code></pre>
+<pre><code>[&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;]
+</code></pre><pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;&lt;head&gt;
+&lt;body&gt;
+&lt;p class=&apos;title&apos; name=&apos;dromouse&apos;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;
+
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+<span class="hljs-keyword">for</span> i, k <span class="hljs-keyword">in</span> enumerate(soup.p.children):
+    <span class="hljs-keyword">print</span> (i, k)
+</code></pre>
+<pre><code>0 &lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;
+</code></pre><pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;&lt;head&gt;
+&lt;body&gt;
+&lt;p class=&apos;title&apos; name=&apos;dromouse&apos;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;
+
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+<span class="hljs-comment"># print(soup.p.descendants)</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> soup.p.descendants:
+    print(i)
+</code></pre>
+<pre><code>&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;
+The Dormouse&apos;s story
+</code></pre><h3 id="&#x7236;&#x8282;&#x70B9;&#x548C;&#x7956;&#x7236;&#x8282;&#x70B9;">&#x7236;&#x8282;&#x70B9;&#x548C;&#x7956;&#x7236;&#x8282;&#x70B9;</h3>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;&lt;head&gt;
+&lt;body&gt;
+&lt;p class=&apos;title&apos; name=&apos;dromouse&apos;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;
+
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+print(soup.b.parent)
+</code></pre>
+<pre><code>&lt;p class=&quot;title&quot; name=&quot;dromouse&quot;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;
+</code></pre><h3 id="&#x5144;&#x5F1F;&#x8282;&#x70B9;">&#x5144;&#x5F1F;&#x8282;&#x70B9;</h3>
+<h2 id="&#x6807;&#x51C6;&#x9009;&#x62E9;&#x5668;">&#x6807;&#x51C6;&#x9009;&#x62E9;&#x5668;</h2>
+<h3 id="findallname-attrs-recurslve-text-kwargs">find_all(name. attrs, recurslve, text, **kwargs)</h3>
+<p>&#x53EF;&#x6839;&#x636E;&#x6807;&#x7B7E;&#x540D;&#x3001;&#x5C5E;&#x6027;&#x3001;&#x5185;&#x5BB9;&#x67E5;&#x627E;&#x6587;&#x6863;</p>
+<p>name</p>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&quot;panel&quot;&gt;
+    &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h4&gt;Hello&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+print(soup.find_all(<span class="hljs-string">&apos;ul&apos;</span>))
+print(type(soup.find_all(<span class="hljs-string">&apos;ul&apos;</span>)[<span class="hljs-number">0</span>]))
+</code></pre>
+<pre><code>[&lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;
+&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+&lt;/ul&gt;, &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;
+&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+&lt;/ul&gt;]
+&lt;class &apos;bs4.element.Tag&apos;&gt;
+</code></pre><pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&quot;panel&quot;&gt;
+    &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h4&gt;Hello&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+
+<span class="hljs-comment"># &#x901A;&#x8FC7;&#x4E0A;&#x6B21;&#x7ED3;&#x679C;&#x77E5;&#x9053; &#x901A;&#x8FC7;find_all(&apos;ul&apos;)&#x5F97;&#x5230;&#x7684; &#x6570;&#x636E; &#x662F;&lt;class &apos;bs4.element.Tag&apos;&gt;</span>
+<span class="hljs-comment"># &#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;find_all() &#x67E5;&#x627E;</span>
+<span class="hljs-keyword">for</span> ul <span class="hljs-keyword">in</span> soup.find_all(<span class="hljs-string">&apos;ul&apos;</span>):
+    print(ul.find_all(<span class="hljs-string">&apos;li&apos;</span>))
+</code></pre>
+<pre><code>[&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;]
+[&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;]
+</code></pre><h3 id="attrs">attrs</h3>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;attrs={}&#x7684;&#x65B9;&#x5F0F;&#x6307;&#x5B9A; &#x6709;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x7684; &#x6807;&#x7B7E;</p>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&quot;panel&quot;&gt;
+    &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h4&gt;Hello&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&apos;elements&apos;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+print(soup.find_all(attrs={<span class="hljs-string">&apos;id&apos;</span>:<span class="hljs-string">&apos;list-1&apos;</span>}))
+print(soup.find_all(attrs={<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;elements&apos;</span>}))
+</code></pre>
+<pre><code>[&lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&quot;elements&quot;&gt;
+&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+&lt;/ul&gt;]
+[&lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&quot;elements&quot;&gt;
+&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+&lt;/ul&gt;]
+</code></pre><pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&quot;panel&quot;&gt;
+    &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h4&gt;Hello&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&apos;elements&apos;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+print(soup.find_all(id=<span class="hljs-string">&apos;list-1&apos;</span>))
+print(soup.find_all(class_=<span class="hljs-string">&apos;element&apos;</span>))
+</code></pre>
+<pre><code>[&lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&quot;elements&quot;&gt;
+&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+&lt;/ul&gt;]
+[&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;]
+</code></pre><h3 id="text">text</h3>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x662F; &#x8BE5;&#x5185;&#x5BB9; &#x800C;&#x4E0D;&#x662F;&#x542B;&#x6709;&#x8BE5;&#x5185;&#x5BB9;&#x7684;&#x6807;&#x7B7E;</p>
+<p>&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x6821;&#x9A8C; &#x6570;&#x636E;&#x5185;&#x5BB9;  &#x800C;&#x4E0D;&#x662F;&#x627E;&#x6807;&#x7B7E;</p>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&quot;panel&quot;&gt;
+    &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h4&gt;Hello&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&apos;elements&apos;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+print(soup.find_all(text=<span class="hljs-string">&apos;Foo&apos;</span>))
+</code></pre>
+<pre><code>[&apos;Foo&apos;, &apos;Foo&apos;]
+</code></pre><h3 id="findname-attrs-recursive-text-kwargs">find(name, attrs, recursive, text, **kwargs)</h3>
+<p>find&#x8FD4;&#x56DE;&#x5355;&#x4E2A;&#x5143;&#x7D20;&#xFF0C; find_all&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x5143;&#x7D20;</p>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&quot;panel&quot;&gt;
+    &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h4&gt;Hello&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&apos;elements&apos;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+print(soup.find(<span class="hljs-string">&apos;ul&apos;</span>))
+print(type(soup.find(<span class="hljs-string">&apos;ul&apos;</span>)))
+print(soup.find(<span class="hljs-string">&apos;page&apos;</span>)) <span class="hljs-comment"># &#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#x5219;&#x8FD4;&#x56DE;None</span>
+</code></pre>
+<pre><code>&lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&quot;elements&quot;&gt;
+&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+&lt;/ul&gt;
+&lt;class &apos;bs4.element.Tag&apos;&gt;
+None
+</code></pre><h3 id="findparents-findparent">find_parents() find_parent()</h3>
+<p>find_parents()&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x7956;&#x5148;&#x8282;&#x70B9;&#xFF0C; find_parent()&#x8FD4;&#x56DE;&#x4E4B;&#x95F4;&#x8BF6;&#x7236;&#x8282;&#x70B9;</p>
+<h3 id="findnextsiblings-findnextsibling">find_next_siblings() find_next_sibling()</h3>
+<p>find_next_siblings() &#x8FD4;&#x56DE;&#x540E;&#x9762;&#x6240;&#x6709;&#x5144;&#x5F1F;&#x8282;&#x70B9;&#xFF0C; find_next_sibling() &#x8FD4;&#x56DE;&#x540E;&#x9762;&#x7B2C;&#x4E00;&#x4E2A;&#x5144;&#x5F1F;&#x8282;&#x70B9;</p>
+<h3 id="findprevioussiblings-findprevioussibling">find_previous_siblings() find_previous_sibling()</h3>
+<p>find_previous_siblings() &#x8FD4;&#x56DE;&#x524D;&#x9762;&#x7684;&#x6240;&#x6709;&#x5144;&#x5F1F;&#x8282;&#x70B9;&#xFF0C;find_previous_sibling()&#x8FD4;&#x56DE;&#x524D;&#x9762;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5144;&#x5F1F;&#x8282;&#x70B9;</p>
+<h3 id="findallnext-findnext">find_all_next() find_next()</h3>
+<p>find_all_next()&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x540E;&#x6240;&#x6709;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x8282;&#x70B9;&#xFF0C; find_next()&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x8282;&#x70B9;</p>
+<h3 id="findallprevious-&#x548C;-findprevious">find_all_previous() &#x548C; find_previous()</h3>
+<p>find_all_previous()&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x540E;&#x6240;&#x6709;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x8282;&#x70B9;&#xFF0C; find_previous()&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x8282;&#x70B9;</p>
+<h2 id="css&#x9009;&#x62E9;&#x5668;">CSS&#x9009;&#x62E9;&#x5668;</h2>
+<p>&#x901A;&#x8FC7;select() &#x76F4;&#x63A5;&#x4F20;&#x5165;CSS&#x9009;&#x62E9;&#x5668;&#x5373;&#x53EF;&#x5B8C;&#x6210;&#x9009;&#x62E9;</p>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&quot;panel&quot;&gt;
+    &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h4&gt;Hello&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&apos;elements&apos;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+print(soup.select(<span class="hljs-string">&apos;.panel .panel-heading&apos;</span>))
+print(soup.select(<span class="hljs-string">&apos;ul li&apos;</span>))
+print(soup.select(<span class="hljs-string">&apos;#list-2 .element&apos;</span>))
+print(type(soup.select(<span class="hljs-string">&apos;ul&apos;</span>)[<span class="hljs-number">0</span>]))
+</code></pre>
+<pre><code>[&lt;div class=&quot;panel-heading&quot;&gt;
+&lt;h4&gt;Hello&lt;/h4&gt;
+&lt;/div&gt;]
+[&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;]
+[&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;]
+&lt;class &apos;bs4.element.Tag&apos;&gt;
+</code></pre><h3 id="&#x83B7;&#x53D6;&#x5C5E;&#x6027;">&#x83B7;&#x53D6;&#x5C5E;&#x6027;</h3>
+<pre><code>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;[&apos;&#x5C5E;&#x6027;&#x540D;&apos;]&#x3002; &#x6216;&#x8005;attrs[&apos;&#x5C5E;&#x6027;&#x540D;&apos;]&#x5F97;&#x5230;&#x8BE5;&#x5C5E;&#x6027;
+</code></pre><pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&quot;panel&quot;&gt;
+    &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h4&gt;Hello&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&apos;elements&apos;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+<span class="hljs-keyword">for</span> ul <span class="hljs-keyword">in</span> soup.select(<span class="hljs-string">&apos;ul&apos;</span>):
+    print(ul[<span class="hljs-string">&apos;id&apos;</span>])
+    print(ul.attrs[<span class="hljs-string">&apos;id&apos;</span>])
+</code></pre>
+<pre><code>list-1
+list-1
+list-2
+list-2
+</code></pre><h3 id="&#x83B7;&#x53D6;&#x5185;&#x5BB9;">&#x83B7;&#x53D6;&#x5185;&#x5BB9;</h3>
+<p>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;.get_text()&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x5185;&#x5BB9;</p>
+<p>string...&#x7B49;&#x65B9;&#x5F0F;&#x4E5F;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5185;&#x5BB9;</p>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&quot;panel&quot;&gt;
+    &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h4&gt;Hello&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&apos;elements&apos;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;
+            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+soup = BeautifulSoup(html, <span class="hljs-string">&apos;lxml&apos;</span>)
+<span class="hljs-keyword">for</span> ul <span class="hljs-keyword">in</span> soup.select(<span class="hljs-string">&apos;li&apos;</span>):
+    print(ul.get_text())
+</code></pre>
+<pre><code>Foo
+Foo
+Bar
+Bar
+Jay
+Jay
+Foo
+Foo
+Bar
+Bar
+Jay
+Jay
+</code></pre><h3 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h3>
+<ul>
+<li>&#x63A8;&#x8350;&#x4F7F;&#x7528;lxml&#x89E3;&#x6790;&#x5E93;&#xFF0C; &#x5FC5;&#x8981;&#x65F6;&#x4F7F;&#x7528;html.parser(&#x7CFB;&#x7EDF;&#x81EA;&#x5E26;&#x7684;&#x89E3;&#x6790;&#x5E93;)</li>
+<li>&#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;&#x7B5B;&#x9009;&#x529F;&#x80FD;&#x5F31;&#xFF0C;&#x4F46;&#x662F;&#x901F;&#x5EA6;&#x5FEB;</li>
+<li>&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;find&#xFF08;&#xFF09;&#x3001;find_all()&#x67E5;&#x8BE2;&#x5339;&#x914D;&#x5355;&#x4E2A;&#x7ED3;&#x679C;&#x6216;&#x591A;&#x4E2A;&#x7ED3;&#x679C;</li>
+<li>&#x5982;&#x679C;&#x591A;CSS&#x9009;&#x62E9;&#x5668;&#x719F;&#x6089;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;select()</li>
+<li>&#x8BB0;&#x4F4F;&#x5E38;&#x7528;&#x7684;&#x83B7;&#x53D6;&#x5C5E;&#x6027;&#x548C;&#x6587;&#x672C;&#x503C;&#x7684;&#x65B9;&#x6CD5;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04-正则表达式练习.html" class="navigation navigation-prev " aria-label="Previous page: 正则表达式练习">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06-pyquery基础.html" class="navigation navigation-next " aria-label="Next page: pyquery基础">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"BeautifulSoup基础","level":"1.3.4.1.5","depth":4,"next":{"title":"pyquery基础","level":"1.3.4.1.6","depth":4,"path":"01-Python之魅/04-Python 爬虫/01-爬虫基础/06-pyquery基础.md","ref":"01-Python之魅/04-Python 爬虫/01-爬虫基础/06-pyquery基础.md","articles":[]},"previous":{"title":"正则表达式练习","level":"1.3.4.1.4","depth":4,"path":"01-Python之魅/04-Python 爬虫/01-爬虫基础/04-正则表达式练习.md","ref":"01-Python之魅/04-Python 爬虫/01-爬虫基础/04-正则表达式练习.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","theme-comscore","splitter","-sharing","search"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"splitter":{},"search":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"CharmNight","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":18,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Poppy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"blogs","extension":null},"file":{"path":"01-Python之魅/04-Python 爬虫/01-爬虫基础/05-BeautifulSoup基础.md","mtime":"2018-03-24T15:08:35.878Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-24T15:09:59.335Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

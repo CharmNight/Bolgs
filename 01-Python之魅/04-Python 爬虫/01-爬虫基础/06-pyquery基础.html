@@ -1,0 +1,1155 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>pyquery基础 · Poppy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="CharmNight">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="07-Selenium基础.html" />
+    
+    
+    <link rel="prev" href="05-BeautifulSoup基础.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../SUMMARY.html">
+            
+                <a href="../../../SUMMARY.html">
+            
+                    
+                    SUMMARY
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Python之魅
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../01-Python Base/">
+            
+                <a href="../../01-Python Base/">
+            
+                    
+                    Python Base
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../01-Python Base/01-Python基础之魔术方法小结.html">
+            
+                <a href="../../01-Python Base/01-Python基础之魔术方法小结.html">
+            
+                    
+                    Python基础之魔术方法小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../02-Python Advanced/">
+            
+                <a href="../../02-Python Advanced/">
+            
+                    
+                    Python Advanced
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../02-Python Advanced/01-Python 解密/01- Python之魅——random.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/01- Python之魅——random.html">
+            
+                    
+                     Python之魅——random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../02-Python Advanced/01-Python 解密/02- Python之魅——bisect.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/02- Python之魅——bisect.html">
+            
+                    
+                     Python之魅——bisect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../02-Python Advanced/01-Python 解密/03- Python之魅——ctypes.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/03- Python之魅——ctypes.html">
+            
+                    
+                     Python之魅——ctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../02-Python Advanced/01-Python 解密/readme.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/readme.html">
+            
+                    
+                    readme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../03-Django/">
+            
+                <a href="../../03-Django/">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Python 爬虫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    爬虫基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1.1" data-path="01-爬虫基础概念.html">
+            
+                <a href="01-爬虫基础概念.html">
+            
+                    
+                    爬虫基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.2" data-path="02-Urllib库基础.html">
+            
+                <a href="02-Urllib库基础.html">
+            
+                    
+                    Urllib库基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.3" data-path="03-Requests库.html">
+            
+                <a href="03-Requests库.html">
+            
+                    
+                    Requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.4" data-path="04-正则表达式练习.html">
+            
+                <a href="04-正则表达式练习.html">
+            
+                    
+                    正则表达式练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.5" data-path="05-BeautifulSoup基础.html">
+            
+                <a href="05-BeautifulSoup基础.html">
+            
+                    
+                    BeautifulSoup基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4.1.6" data-path="06-pyquery基础.html">
+            
+                <a href="06-pyquery基础.html">
+            
+                    
+                    pyquery基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.7" data-path="07-Selenium基础.html">
+            
+                <a href="07-Selenium基础.html">
+            
+                    
+                    Selenium基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../02-爬虫练习/">
+            
+                <a href="../02-爬虫练习/">
+            
+                    
+                    爬虫练习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.2.1" data-path="../02-爬虫练习/Python爬取百度图库.html">
+            
+                <a href="../02-爬虫练习/Python爬取百度图库.html">
+            
+                    
+                    Python爬取百度图库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2.2" data-path="../02-爬虫练习/selenium小玩具.html">
+            
+                <a href="../02-爬虫练习/selenium小玩具.html">
+            
+                    
+                    selenium小玩具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../02-MySQl数据库/">
+            
+                <a href="../../../02-MySQl数据库/">
+            
+                    
+                    MySQl数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../02-MySQl数据库/01-mysql数据库安装.html">
+            
+                <a href="../../../02-MySQl数据库/01-mysql数据库安装.html">
+            
+                    
+                    mysql数据库安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../02-MySQl数据库/02-mysql数据库基础操作.html">
+            
+                <a href="../../../02-MySQl数据库/02-mysql数据库基础操作.html">
+            
+                    
+                    mysql数据库基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../02-MySQl数据库/03-SQL逻辑查询语句执行顺序.html">
+            
+                <a href="../../../02-MySQl数据库/03-SQL逻辑查询语句执行顺序.html">
+            
+                    
+                    SQL逻辑查询语句执行顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../02-MySQl数据库/04-mysql约束.html">
+            
+                <a href="../../../02-MySQl数据库/04-mysql约束.html">
+            
+                    
+                    mysql约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../../02-MySQl数据库/05-mysql全家桶.html">
+            
+                <a href="../../../02-MySQl数据库/05-mysql全家桶.html">
+            
+                    
+                    mysql全家桶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../../02-MySQl数据库/06-mysql索引.html">
+            
+                <a href="../../../02-MySQl数据库/06-mysql索引.html">
+            
+                    
+                    mysql索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../../02-MySQl数据库/07-mysql慢查询日志.html">
+            
+                <a href="../../../02-MySQl数据库/07-mysql慢查询日志.html">
+            
+                    
+                    mysql慢查询日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >pyquery基础</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pyquery">PyQuery</h1>
+<p>&#x5F3A;&#x5927;&#x53C8;&#x7075;&#x6D3B;&#x7684;&#x7F51;&#x9875;&#x89E3;&#x6790;&#x5E93;&#x3002;&#x5982;&#x679C;&#x4F60;&#x89C9;&#x5F97;&#x6B63;&#x5219;&#x5199;&#x8D77;&#x6765;&#x592A;&#x9EBB;&#x70E6;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x89C9;&#x5F97;BeautifulSoup&#x8BED;&#x6CD5;&#x592A;&#x96BE;&#x8BB0;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x719F;&#x6089;jQuery&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;PyQuery&#x5C31;&#x662F;&#x4F60;&#x7684;&#x7EDD;&#x4F73;&#x9009;&#x62E9;&#x3002;</p>
+<h2 id="&#x521D;&#x59CB;&#x5316;">&#x521D;&#x59CB;&#x5316;</h2>
+<h3 id="&#x5B57;&#x7B26;&#x4E32;&#x521D;&#x59CB;&#x5316;">&#x5B57;&#x7B26;&#x4E32;&#x521D;&#x59CB;&#x5316;</h3>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+        &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+print(doc(<span class="hljs-string">&apos;li&apos;</span>))
+</code></pre>
+<pre><code>&lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+        &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+</code></pre><h3 id="url-&#x521D;&#x59CB;&#x5316;">URL &#x521D;&#x59CB;&#x5316;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(url=<span class="hljs-string">&apos;http://www.baidu.com&apos;</span>)
+print(doc(<span class="hljs-string">&apos;head&apos;</span>))
+print(type(doc(<span class="hljs-string">&apos;head&apos;</span>)))
+</code></pre>
+<pre><code>&lt;head&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot;/&gt;&lt;meta content=&quot;always&quot; name=&quot;referrer&quot;/&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://s1.bdstatic.com/r/www/cache/bdorz/baidu.min.css&quot;/&gt;&lt;title&gt;&#xE7;&#x99;&#xBE;&#xE5;&#xBA;&#xA6;&#xE4;&#xB8;&#x80;&#xE4;&#xB8;&#x8B;&#xEF;&#xBC;&#x8C;&#xE4;&#xBD; &#xE5;&#xB0;&#xB1;&#xE7;&#x9F;&#xA5;&#xE9;&#x81;&#x93;&lt;/title&gt;&lt;/head&gt; 
+&lt;class &apos;pyquery.pyquery.PyQuery&apos;&gt;
+</code></pre><h3 id="&#x6587;&#x4EF6;&#x521D;&#x59CB;&#x5316;">&#x6587;&#x4EF6;&#x521D;&#x59CB;&#x5316;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pa(filename=<span class="hljs-string">&apos;xxx&apos;</span>)
+print(doc(<span class="hljs-string">&apos;li&apos;</span>))
+</code></pre>
+<h2 id="&#x57FA;&#x672C;css&#x9009;&#x62E9;&#x5668;">&#x57FA;&#x672C;CSS&#x9009;&#x62E9;&#x5668;</h2>
+<pre><code>&#x5982;&#x679C;&#x662F;&#x7C7B; .
+&#x5982;&#x679C;&#x662F;id #
+&#x5982;&#x679C;&#x662F;&#x6807;&#x7B7E; &#x5C31;&#x4EC0;&#x4E48;&#x4E5F;&#x4E0D;&#x52A0;
+&#x8BF4;&#x767D;&#x4E86; &#x548C;CSS &#x9009;&#x62E9;&#x5668;&#x7528;&#x6CD5;&#x4E00;&#x6837; &#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x540E;&#x4EE3;&#x9009;&#x62E9;&#x5668;...
+</code></pre><pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div id=&apos;container&apos;&gt;
+    &lt;ul class=&apos;list&apos;&gt;
+        &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+        &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+print(doc(<span class="hljs-string">&apos;#container .list li&apos;</span>))
+</code></pre>
+<pre><code>&lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+        &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+</code></pre><h2 id="&#x67E5;&#x627E;&#x5143;&#x7D20;">&#x67E5;&#x627E;&#x5143;&#x7D20;</h2>
+<h3 id="&#x5B50;&#x5143;&#x7D20;">&#x5B50;&#x5143;&#x7D20;</h3>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div id=&apos;container&apos;&gt;
+    &lt;ul class=&apos;list&apos;&gt;
+        &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+        &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+items = doc(<span class="hljs-string">&apos;.list&apos;</span>)
+print(type(items))
+print(items)
+lis = items.find(<span class="hljs-string">&apos;li&apos;</span>)
+print(type(lis))
+print(lis)
+</code></pre>
+<pre><code>&lt;class &apos;pyquery.pyquery.PyQuery&apos;&gt;
+&lt;ul class=&quot;list&quot;&gt;
+        &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+        &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;class &apos;pyquery.pyquery.PyQuery&apos;&gt;
+&lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+        &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+</code></pre><pre><code class="lang-python">lis = items.children()
+print(type(lis))
+print(lis)
+</code></pre>
+<pre><code>&lt;class &apos;pyquery.pyquery.PyQuery&apos;&gt;
+&lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+        &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+</code></pre><pre><code class="lang-python">lis = items.children(<span class="hljs-string">&apos;.active&apos;</span>)
+print(lis)
+</code></pre>
+<pre><code>&lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+</code></pre><h3 id="&#x7236;&#x5143;&#x7D20;">&#x7236;&#x5143;&#x7D20;</h3>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div id=&apos;container&apos;&gt;
+    &lt;ul class=&apos;list&apos;&gt;
+        &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+        &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+items = doc(<span class="hljs-string">&apos;.list&apos;</span>)
+container = items.parent()
+print(type(container))
+print(container)
+</code></pre>
+<pre><code>&lt;class &apos;pyquery.pyquery.PyQuery&apos;&gt;
+&lt;div id=&quot;container&quot;&gt;
+    &lt;ul class=&quot;list&quot;&gt;
+        &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+        &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre><pre><code class="lang-python"><span class="hljs-comment"># &#x67E5;&#x627E;&#x6240;&#x6709;&#x7684;&#x7956;&#x5148;&#x5143;&#x7D20;</span>
+
+html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&apos;wrap&apos;&gt;
+    &lt;div id=&apos;container&apos;&gt;
+        &lt;ul class=&apos;list&apos;&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+items = doc(<span class="hljs-string">&apos;.list&apos;</span>)
+parents = items.parents()
+print(type(parents))
+print(parents)
+</code></pre>
+<pre><code>&lt;class &apos;pyquery.pyquery.PyQuery&apos;&gt;
+&lt;div class=&quot;wrap&quot;&gt;
+    &lt;div id=&quot;container&quot;&gt;
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;div id=&quot;container&quot;&gt;
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+</code></pre><pre><code class="lang-python">parent = items.parents(<span class="hljs-string">&apos;.wrap&apos;</span>)
+print(parent)
+</code></pre>
+<pre><code>&lt;div class=&quot;wrap&quot;&gt;
+    &lt;div id=&quot;container&quot;&gt;
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h3 id="&#x5144;&#x5F1F;&#x5143;&#x7D20;">&#x5144;&#x5F1F;&#x5143;&#x7D20;</h3>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&apos;wrap&apos;&gt;
+    &lt;div id=&apos;container&apos;&gt;
+        &lt;ul class=&apos;list&apos;&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+li = doc(<span class="hljs-string">&apos;.list .item-0.active&apos;</span>)
+print(li.siblings())
+</code></pre>
+<pre><code>&lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+</code></pre><pre><code class="lang-python">print(li.siblings(<span class="hljs-string">&apos;.active&apos;</span>))
+</code></pre>
+<pre><code>&lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+</code></pre><h2 id="&#x904D;&#x5386;">&#x904D;&#x5386;</h2>
+<h3 id="&#x5355;&#x4E2A;&#x5143;&#x7D20;">&#x5355;&#x4E2A;&#x5143;&#x7D20;</h3>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&apos;wrap&apos;&gt;
+    &lt;div id=&apos;container&apos;&gt;
+        &lt;ul class=&apos;list&apos;&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+li = doc(<span class="hljs-string">&apos;.item-0.active&apos;</span>)
+print(li)
+</code></pre>
+<pre><code>&lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+</code></pre><pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&apos;wrap&apos;&gt;
+    &lt;div id=&apos;container&apos;&gt;
+        &lt;ul class=&apos;list&apos;&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+lis = doc(<span class="hljs-string">&apos;li&apos;</span>).items()
+print(lis)
+print(type(lis))
+<span class="hljs-keyword">for</span> li <span class="hljs-keyword">in</span> lis:
+    print(li.find(<span class="hljs-string">&apos;a&apos;</span>))
+</code></pre>
+<pre><code>&lt;generator object PyQuery.items at 0x000001A759D9EBF8&gt;
+&lt;class &apos;generator&apos;&gt;
+
+&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;
+&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;
+&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;
+&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;
+</code></pre><h2 id="&#x83B7;&#x53D6;&#x4FE1;&#x606F;">&#x83B7;&#x53D6;&#x4FE1;&#x606F;</h2>
+<h3 id="&#x83B7;&#x53D6;&#x5C5E;&#x6027;">&#x83B7;&#x53D6;&#x5C5E;&#x6027;</h3>
+<p>&#x901A;&#x8FC7;attr(&apos;&#x5C5E;&#x6027;&#x540D;&apos;) &#x6216; attr.&#x5C5E;&#x6027;&#x540D;</p>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&apos;wrap&apos;&gt;
+    &lt;div id=&apos;container&apos;&gt;
+        &lt;ul class=&apos;list&apos;&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+a = doc(<span class="hljs-string">&apos;.item-0.active a&apos;</span>)
+print(a)
+print(a.attr(<span class="hljs-string">&apos;href&apos;</span>))
+print(a.attr.href)
+</code></pre>
+<pre><code>&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;
+link3.html
+link3.html
+</code></pre><h3 id="&#x83B7;&#x53D6;&#x6587;&#x672C;">&#x83B7;&#x53D6;&#x6587;&#x672C;</h3>
+<p>&#x901A;&#x8FC7; .text()&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x6587;&#x672C;&#x5185;&#x5BB9;</p>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&apos;wrap&apos;&gt;
+    &lt;div id=&apos;container&apos;&gt;
+        &lt;ul class=&apos;list&apos;&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+a = doc(<span class="hljs-string">&apos;.item-0.active a&apos;</span>)
+print(a)
+print(a.text())
+</code></pre>
+<pre><code>&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;
+third item
+</code></pre><h3 id="&#x83B7;&#x53D6;html">&#x83B7;&#x53D6;HTML</h3>
+<p>&#x901A;&#x8FC7;.html()&#x65B9;&#x5F0F;&#x83B7;&#x53D6;HTML&#x4EE3;&#x7801;</p>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&apos;wrap&apos;&gt;
+    &lt;div id=&apos;container&apos;&gt;
+        &lt;ul class=&apos;list&apos;&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+a = doc(<span class="hljs-string">&apos;.item-0.active&apos;</span>)
+print(a)
+print(a.html())
+</code></pre>
+<pre><code>&lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;
+</code></pre><h2 id="dom&#x64CD;&#x4F5C;">DOM&#x64CD;&#x4F5C;</h2>
+<h3 id="addclass&#x3001;-removeclass">addClass&#x3001; removeClass</h3>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&apos;wrap&apos;&gt;
+    &lt;div id=&apos;container&apos;&gt;
+        &lt;ul class=&apos;list&apos;&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+li = doc(<span class="hljs-string">&apos;.item-0.active&apos;</span>)
+print(li)
+li.removeClass(<span class="hljs-string">&apos;active&apos;</span>)
+print(li)
+li.addClass(<span class="hljs-string">&apos;acitve&apos;</span>)
+print(li)
+</code></pre>
+<pre><code>&lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+&lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+&lt;li class=&quot;item-0 acitve&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+</code></pre><h3 id="attr-&#x3001;css">attr &#x3001;css</h3>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&apos;wrap&apos;&gt;
+    &lt;div id=&apos;container&apos;&gt;
+        &lt;ul class=&apos;list&apos;&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+li = doc(<span class="hljs-string">&apos;.item-0.active&apos;</span>)
+print(li)
+li.attr(<span class="hljs-string">&apos;name&apos;</span>,<span class="hljs-string">&apos;link&apos;</span>)
+print(li)
+li.css(<span class="hljs-string">&apos;font-size&apos;</span>, <span class="hljs-string">&apos;14px&apos;</span>)
+print(li)
+</code></pre>
+<pre><code>&lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+&lt;li class=&quot;item-0 active&quot; name=&quot;link&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+&lt;li class=&quot;item-0 active&quot; name=&quot;link&quot; style=&quot;font-size: 14px&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+</code></pre><h3 id="remove">remove</h3>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&quot;wrap&quot;&gt;
+    Hello,World
+    &lt;p&gt;This is a paragrap&lt;/p&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+wrap = doc(<span class="hljs-string">&apos;.wrap&apos;</span>)
+print(wrap.text())
+wrap.find(<span class="hljs-string">&apos;p&apos;</span>).remove()
+print(wrap.text())
+</code></pre>
+<pre><code>Hello,World
+This is a paragrap
+Hello,World
+</code></pre><h3 id="&#x4F2A;&#x7C7B;&#x9009;&#x62E9;&#x5668;">&#x4F2A;&#x7C7B;&#x9009;&#x62E9;&#x5668;</h3>
+<pre><code class="lang-python">html = <span class="hljs-string">&quot;&quot;&quot;
+&lt;div class=&apos;wrap&apos;&gt;
+    &lt;div id=&apos;container&apos;&gt;
+        &lt;ul class=&apos;list&apos;&gt;
+            &lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0 active&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;&lt;span class=&quot;bold&quot;&gt;third item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> pyquery <span class="hljs-keyword">import</span> PyQuery <span class="hljs-keyword">as</span> pq
+doc = pq(html)
+li = doc(<span class="hljs-string">&apos;li:first-child&apos;</span>)
+print(li)
+li = doc(<span class="hljs-string">&apos;li:last-child&apos;</span>)
+print(li)
+li = doc(<span class="hljs-string">&apos;li:nth-child(2)&apos;</span>)
+print(li)
+li = doc(<span class="hljs-string">&apos;li:gt(2)&apos;</span>)
+print(li)
+li = doc(<span class="hljs-string">&apos;li:nth-child(2n)&apos;</span>)
+print(li)
+li = doc(<span class="hljs-string">&apos;li:contains(second)&apos;</span>)
+print(li)
+</code></pre>
+<pre><code>&lt;li class=&quot;item-0&quot;&gt;first item&lt;/li&gt;
+
+&lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+
+&lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+
+&lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fifth item&lt;/a&gt;&lt;/li&gt;
+
+&lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1 active&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+
+&lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05-BeautifulSoup基础.html" class="navigation navigation-prev " aria-label="Previous page: BeautifulSoup基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="07-Selenium基础.html" class="navigation navigation-next " aria-label="Next page: Selenium基础">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"pyquery基础","level":"1.3.4.1.6","depth":4,"next":{"title":"Selenium基础","level":"1.3.4.1.7","depth":4,"path":"01-Python之魅/04-Python 爬虫/01-爬虫基础/07-Selenium基础.md","ref":"01-Python之魅/04-Python 爬虫/01-爬虫基础/07-Selenium基础.md","articles":[]},"previous":{"title":"BeautifulSoup基础","level":"1.3.4.1.5","depth":4,"path":"01-Python之魅/04-Python 爬虫/01-爬虫基础/05-BeautifulSoup基础.md","ref":"01-Python之魅/04-Python 爬虫/01-爬虫基础/05-BeautifulSoup基础.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","theme-comscore","splitter","-sharing","search"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"splitter":{},"search":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"CharmNight","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":18,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Poppy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"blogs","extension":null},"file":{"path":"01-Python之魅/04-Python 爬虫/01-爬虫基础/06-pyquery基础.md","mtime":"2018-03-24T15:08:35.878Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-24T15:09:59.335Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

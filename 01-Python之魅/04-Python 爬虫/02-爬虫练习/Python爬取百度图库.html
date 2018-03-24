@@ -1,0 +1,833 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Python爬取百度图库 · Poppy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="CharmNight">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="selenium小玩具.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../SUMMARY.html">
+            
+                <a href="../../../SUMMARY.html">
+            
+                    
+                    SUMMARY
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Python之魅
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../01-Python Base/">
+            
+                <a href="../../01-Python Base/">
+            
+                    
+                    Python Base
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../01-Python Base/01-Python基础之魔术方法小结.html">
+            
+                <a href="../../01-Python Base/01-Python基础之魔术方法小结.html">
+            
+                    
+                    Python基础之魔术方法小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../02-Python Advanced/">
+            
+                <a href="../../02-Python Advanced/">
+            
+                    
+                    Python Advanced
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../02-Python Advanced/01-Python 解密/01- Python之魅——random.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/01- Python之魅——random.html">
+            
+                    
+                     Python之魅——random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../02-Python Advanced/01-Python 解密/02- Python之魅——bisect.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/02- Python之魅——bisect.html">
+            
+                    
+                     Python之魅——bisect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../02-Python Advanced/01-Python 解密/03- Python之魅——ctypes.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/03- Python之魅——ctypes.html">
+            
+                    
+                     Python之魅——ctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../02-Python Advanced/01-Python 解密/readme.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/readme.html">
+            
+                    
+                    readme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../03-Django/">
+            
+                <a href="../../03-Django/">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Python 爬虫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../01-爬虫基础/">
+            
+                <a href="../01-爬虫基础/">
+            
+                    
+                    爬虫基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1.1" data-path="../01-爬虫基础/01-爬虫基础概念.html">
+            
+                <a href="../01-爬虫基础/01-爬虫基础概念.html">
+            
+                    
+                    爬虫基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.2" data-path="../01-爬虫基础/02-Urllib库基础.html">
+            
+                <a href="../01-爬虫基础/02-Urllib库基础.html">
+            
+                    
+                    Urllib库基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.3" data-path="../01-爬虫基础/03-Requests库.html">
+            
+                <a href="../01-爬虫基础/03-Requests库.html">
+            
+                    
+                    Requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.4" data-path="../01-爬虫基础/04-正则表达式练习.html">
+            
+                <a href="../01-爬虫基础/04-正则表达式练习.html">
+            
+                    
+                    正则表达式练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.5" data-path="../01-爬虫基础/05-BeautifulSoup基础.html">
+            
+                <a href="../01-爬虫基础/05-BeautifulSoup基础.html">
+            
+                    
+                    BeautifulSoup基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.6" data-path="../01-爬虫基础/06-pyquery基础.html">
+            
+                <a href="../01-爬虫基础/06-pyquery基础.html">
+            
+                    
+                    pyquery基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.7" data-path="../01-爬虫基础/07-Selenium基础.html">
+            
+                <a href="../01-爬虫基础/07-Selenium基础.html">
+            
+                    
+                    Selenium基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    爬虫练习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.4.2.1" data-path="Python爬取百度图库.html">
+            
+                <a href="Python爬取百度图库.html">
+            
+                    
+                    Python爬取百度图库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2.2" data-path="selenium小玩具.html">
+            
+                <a href="selenium小玩具.html">
+            
+                    
+                    selenium小玩具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../02-MySQl数据库/">
+            
+                <a href="../../../02-MySQl数据库/">
+            
+                    
+                    MySQl数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../02-MySQl数据库/01-mysql数据库安装.html">
+            
+                <a href="../../../02-MySQl数据库/01-mysql数据库安装.html">
+            
+                    
+                    mysql数据库安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../02-MySQl数据库/02-mysql数据库基础操作.html">
+            
+                <a href="../../../02-MySQl数据库/02-mysql数据库基础操作.html">
+            
+                    
+                    mysql数据库基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../02-MySQl数据库/03-SQL逻辑查询语句执行顺序.html">
+            
+                <a href="../../../02-MySQl数据库/03-SQL逻辑查询语句执行顺序.html">
+            
+                    
+                    SQL逻辑查询语句执行顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../02-MySQl数据库/04-mysql约束.html">
+            
+                <a href="../../../02-MySQl数据库/04-mysql约束.html">
+            
+                    
+                    mysql约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../../02-MySQl数据库/05-mysql全家桶.html">
+            
+                <a href="../../../02-MySQl数据库/05-mysql全家桶.html">
+            
+                    
+                    mysql全家桶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../../02-MySQl数据库/06-mysql索引.html">
+            
+                <a href="../../../02-MySQl数据库/06-mysql索引.html">
+            
+                    
+                    mysql索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../../02-MySQl数据库/07-mysql慢查询日志.html">
+            
+                <a href="../../../02-MySQl数据库/07-mysql慢查询日志.html">
+            
+                    
+                    mysql慢查询日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Python爬取百度图库</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="python&#x722C;&#x53D6;&#x767E;&#x5EA6;&#x56FE;&#x5E93;">Python&#x722C;&#x53D6;&#x767E;&#x5EA6;&#x56FE;&#x5E93;</h1>
+<h2 id="&#x9875;&#x9762;&#x5206;&#x6790;">&#x9875;&#x9762;&#x5206;&#x6790;</h2>
+<p>&#x901A;&#x8FC7;Chrome &#x7684;&#x5F00;&#x53D1;&#x8005;&#x6A21;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F88;&#x53D1;&#x73B0; &#x767E;&#x5EA6;&#x56FE;&#x5E93;&#x662F;&#x901A;&#x8FC7;ajax &#x52A0;&#x8F7D;&#x56FE;&#x7247;&#x7684;&#x3002; &#x6BCF;&#x4E00;&#x6B21;&#x90FD;&#x4F1A;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#xFF1A;<code>https://image.baidu.com/search/acjson?tn=resultjson_com&amp;ipn=rj&amp;ct=201326592&amp;is=&amp;fp=result&amp;queryWord=%E6%BC%86%E9%BB%91%E7%9A%84%E5%AD%90%E5%BC%B9%E5%A3%81%E7%BA%B8&amp;cl=2&amp;lm=-1&amp;ie=utf-8&amp;oe=utf-8&amp;adpicid=&amp;st=-1&amp;z=&amp;ic=0&amp;word=%E6%BC%86%E9%BB%91%E7%9A%84%E5%AD%90%E5%BC%B9%E5%A3%81%E7%BA%B8&amp;s=&amp;se=&amp;tab=&amp;width=&amp;height=&amp;face=0&amp;istype=2&amp;qc=&amp;nc=1&amp;fr=&amp;pn=30&amp;rn=30&amp;gsm=1e&amp;1521558249171=</code> &#x4EE5;&#x6211;&#x641C;&#x7D22;&#x7684;&#x5185;&#x5BB9;&#x4E3A;&#x4F8B; &#x8FD9;&#x5768;&#x5F88;&#x957F;&#x7684;url &#x5C31;&#x662F;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684; &#x5185;&#x5BB9;&#x3002;&#x91CC;&#x9762;&#x4EE5;json&#x683C;&#x5F0F;&#x4FDD;&#x5B58;&#x7684;&#x56FE;&#x7247;&#x6570;&#x636E;</p>
+<p>&#x90A3;&#x4E48;&#x8FD9;&#x5768;url&#x662F;&#x5982;&#x4F55;&#x6784;&#x5EFA;&#x7684;&#x5462;&#xFF1F;</p>
+<p>&#x591A;&#x6B21;&#x5BF9;&#x6BD4;url &#x53EF;&#x4EE5;&#x53D1;&#x73B0; &#x6709;&#x51E0;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x6539;&#x53D8;&#x7684;<code>&amp;pn=</code> <code>&amp;1521558249171</code>  queryWord &#x548C;word &#x90FD;&#x662F;&#x6307;&#x641C;&#x7D22;&#x5185;&#x5BB9;</p>
+<p>&#x5176;&#x4ED6;&#x7684;&#x53C2;&#x6570;&#x90FD;&#x662F;&#x56FA;&#x5B9A;&#x7684;QAQ  &#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x5728;&#x5F04;&#x61C2; pn &#x548C; &#x4E00;&#x4E32;&#x795E;&#x5947;&#x7684;&#x6570;&#x5B57; &#x662F;&#x4EC0;&#x4E48;&#x5C31;&#x6210;&#x529F;&#x4E86;&#x4E00;&#x534A;&#x4E86;</p>
+<p>pn &#xFF1A; &#x5F53;&#x524D;&#x9875;&#x6570; * 30</p>
+<p>&#x795E;&#x5947;&#x6570;&#x5B57;&#xFF1A; &#x5F53;&#x524D;&#x65F6;&#x95F4;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x53D6;&#x5230;&#x5C0F;&#x6570;&#x70B9;&#x540E;3&#x4F4D;</p>
+<p>gsm&#xFF1A;pn &#x7684; 16&#x4F4D;&#x663E;&#x793A;</p>
+<h2 id="&#x4EE3;&#x7801;&#x7F16;&#x5199;">&#x4EE3;&#x7801;&#x7F16;&#x5199;</h2>
+<p>&#x6211;&#x662F;&#x4F7F;&#x7528;&#x7684;python3.6&#x7248;&#x672C;</p>
+<p>&#x5148;&#x7B80;&#x5355;&#x8BF4;&#x4E0B;&#x5199;&#x4EE3;&#x7801;&#x7684;&#x601D;&#x8DEF;&#xFF1A;</p>
+<ul>
+<li>&#x5148;&#x8FDB;&#x884C;&#x62FC;&#x63A5;url--&gt; &#x5C31;&#x662F;&#x542B;&#x6709;&#x56FE;&#x7247;&#x6570;&#x636E;&#x7684;json</li>
+<li>&#x6839;&#x636E;url&#x8FDB;&#x884C;&#x8BF7;&#x6C42; &#x62FF;&#x5230;html</li>
+<li>&#x62FF;&#x5230;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x53D6;&#x5177;&#x4F53;&#x6570;&#x636E;</li>
+<li>&#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;&#x672C;&#x5730;</li>
+</ul>
+<p>&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x901F;&#x5EA6;&#xFF1A; &#x4F7F;&#x7528;ThreadPoolExecutor &#x7EF4;&#x62A4;&#x4E86; 10&#x4E2A;&#x7EBF;&#x7A0B;</p>
+<p>emmm  &#x7136;&#x540E;&#x3002;&#x3002;&#x3002;&#x6CA1;&#x6709;&#x7136;&#x540E;&#x4E86;</p>
+<h2 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> urllib.parse <span class="hljs-keyword">import</span> urlencode
+<span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">import</span> random
+<span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">import</span> simplejson <span class="hljs-keyword">as</span> json
+<span class="hljs-keyword">from</span> concurrent.futures <span class="hljs-keyword">import</span> ThreadPoolExecutor <span class="hljs-keyword">as</span> Pool
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Crawler</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x722C;&#x866B;&#x7C7B;
+    &quot;&quot;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, BATH_DIR=<span class="hljs-string">r&apos;E:\Demo\baidu_img&apos;</span>, thread=<span class="hljs-number">10</span>, height=None, width=None)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;&#x521D;&#x59CB;&#x5316;&#x5165;&#x53E3;URL
+            &#x53EF;&#x8BBE;&#x7F6E;BATH_DIR &#x56FE;&#x7247;&#x5B58;&#x50A8;&#x8DEF;&#x5F84; &#x9ED8;&#x8BA4;&#x6D4B;&#x8BD5;&#x8DEF;&#x5F84;
+            thread &#x7EBF;&#x7A0B;&#x6C60;&#x7EF4;&#x62A4;&#x7684;&#x7EBF;&#x7A0B;&#x6570;&#x91CF; &#x9ED8;&#x8BA4;&#x662F;10&#x4E2A;
+            height &#x56FE;&#x7247;&#x9AD8;&#x5EA6;
+            width &#x56FE;&#x7247;&#x5BBD;&#x5EA6;
+        &quot;&quot;&quot;</span>
+        self.user_agent = [<span class="hljs-string">&apos;Mozilla/5.0(Windows;U;WindowsNT6.1;en-us)\
+                            AppleWebKit/534.50(KHTML,likeGecko)Version/5.1Safari/534.50&apos;</span>,
+                           <span class="hljs-string">&apos;Mozilla/5.0(Macintosh;U;IntelMacOSX10_6_8;en-us)\
+                            AppleWebKit/534.50(KHTML,likeGecko)Version/5.1Safari/534.50&apos;</span>,
+                           ]
+        self.headers = {
+            <span class="hljs-string">&apos;User-Agent&apos;</span>: self.user_agent[<span class="hljs-number">0</span>] <span class="hljs-keyword">if</span> random.randrange(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>) % <span class="hljs-number">2</span> == <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> self.user_agent[<span class="hljs-number">1</span>],
+        }
+        self.base_url = <span class="hljs-string">&apos;https://image.baidu.com/search/acjson?&apos;</span>
+        self.end_page = <span class="hljs-keyword">None</span>
+        self.world = <span class="hljs-keyword">None</span>
+        self.err_list = []
+        self.BATH_DIR = BATH_DIR
+        self.theadings = thread
+        self.height = height
+        self.width = width
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_json_url</span><span class="hljs-params">(self, page=<span class="hljs-number">1</span>)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;&#x83B7;&#x53D6;json&#x7684;&#x6570;&#x636E;&#x5305;&#x7684;URL&quot;&quot;&quot;</span>
+        s_time = time.time()
+        s_time = <span class="hljs-string">&apos;&apos;</span>.join(<span class="hljs-string">&apos;{:.3f}&apos;</span>.format(s_time).split(<span class="hljs-string">&apos;.&apos;</span>))
+        pn = page * <span class="hljs-number">30</span>
+        gsm = hex(pn)
+        data = {
+            <span class="hljs-string">&apos;tn&apos;</span>: <span class="hljs-string">&apos;resultjson_com&apos;</span>,
+            <span class="hljs-string">&apos;ipn&apos;</span>: <span class="hljs-string">&apos;rj&apos;</span>,
+            <span class="hljs-string">&apos;ct&apos;</span>: <span class="hljs-string">&apos;201326592&apos;</span>,
+            <span class="hljs-string">&apos;is&apos;</span>: <span class="hljs-string">&apos;&apos;</span>,
+            <span class="hljs-string">&apos;fp&apos;</span>: <span class="hljs-string">&apos;result&apos;</span>,
+            <span class="hljs-string">&apos;queryWord&apos;</span>: self.world,
+            <span class="hljs-string">&apos;cl&apos;</span>: <span class="hljs-string">&apos;2&apos;</span>,
+            <span class="hljs-string">&apos;lm&apos;</span>: <span class="hljs-string">&apos;-1&apos;</span>,
+            <span class="hljs-string">&apos;ie&apos;</span>: <span class="hljs-string">&apos;utf-8&apos;</span>,
+            <span class="hljs-string">&apos;oe&apos;</span>: <span class="hljs-string">&apos;utf-8&apos;</span>,
+            <span class="hljs-string">&apos;adpicid&apos;</span>:<span class="hljs-string">&apos;&apos;</span>,
+            <span class="hljs-string">&apos;st&apos;</span>: <span class="hljs-string">&apos;-1&apos;</span>,
+            <span class="hljs-string">&apos;z&apos;</span>: <span class="hljs-string">&apos;&apos;</span>,
+            <span class="hljs-string">&apos;ic&apos;</span>: <span class="hljs-string">&apos;0&apos;</span>,
+            <span class="hljs-string">&apos;word&apos;</span>: self.world,
+            <span class="hljs-string">&apos;s&apos;</span>: <span class="hljs-string">&apos;&apos;</span>,
+            <span class="hljs-string">&apos;se&apos;</span>: <span class="hljs-string">&apos;&apos;</span>,
+            <span class="hljs-string">&apos;tab&apos;</span>: <span class="hljs-string">&apos;&apos;</span>,
+            <span class="hljs-string">&apos;width&apos;</span>: <span class="hljs-string">&apos;&apos;</span>,
+            <span class="hljs-string">&apos;height&apos;</span>: <span class="hljs-string">&apos;&apos;</span>,
+            <span class="hljs-string">&apos;face&apos;</span>: <span class="hljs-string">&apos;0&apos;</span>,
+            <span class="hljs-string">&apos;istype&apos;</span>: <span class="hljs-string">&apos;2&apos;</span>,
+            <span class="hljs-string">&apos;qc&apos;</span>: <span class="hljs-string">&apos;&apos;</span>,
+            <span class="hljs-string">&apos;nc&apos;</span>: <span class="hljs-string">&apos;1&apos;</span>,
+            <span class="hljs-string">&apos;fr&apos;</span>: <span class="hljs-string">&apos;&apos;</span>,
+            <span class="hljs-string">&apos;pn&apos;</span>: pn,
+            <span class="hljs-string">&apos;rn&apos;</span>: <span class="hljs-string">&apos;30&apos;</span>,
+            <span class="hljs-string">&apos;gsm&apos;</span>: gsm,
+            <span class="hljs-string">&apos;e&apos;</span>: <span class="hljs-string">&apos;&apos;</span>,
+            s_time: <span class="hljs-string">&apos;&apos;</span>,
+        }
+        url = self.base_url + urlencode(data)
+        <span class="hljs-keyword">return</span> url
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_json</span><span class="hljs-params">(self, page=<span class="hljs-number">1</span>)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;&#x8BF7;&#x6C42;json&#x83B7;&#x53D6;&#x5305;&#x542B;&#x56FE;&#x7247;&#x7684;&#x5305;&quot;&quot;&quot;</span>
+        url = self.get_json_url(page)
+        time.sleep(<span class="hljs-number">1</span>)
+        response = requests.get(url, headers=self.headers)
+        <span class="hljs-keyword">if</span> response.status_code == <span class="hljs-number">200</span>:
+            <span class="hljs-keyword">try</span>:
+                data = json.loads(response.content.decode(<span class="hljs-string">&apos;utf-8&apos;</span>))
+            <span class="hljs-keyword">except</span> json.JSONDecodeError:
+                time.sleep(<span class="hljs-number">0.5</span>)
+                res = str(response.content.decode()).replace(<span class="hljs-string">&apos;\\&apos;</span>, <span class="hljs-string">&quot;&quot;</span>)
+                data = json.loads(res)
+            <span class="hljs-keyword">return</span> data
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read_json</span><span class="hljs-params">(self, page=<span class="hljs-number">1</span>)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;&#x8BFB;&#x53D6;json&#x7684;&#x5185;&#x5BB9;&#x63D0;&#x53D6;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;&quot;&quot;&quot;</span>
+        data = self.get_json(page)
+        <span class="hljs-keyword">if</span> self.end_page <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+            print(data)
+            self.end_page = data[<span class="hljs-string">&apos;listNum&apos;</span>] // <span class="hljs-number">30</span> + <span class="hljs-number">1</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> (data[<span class="hljs-string">&apos;data&apos;</span>]):
+            <span class="hljs-keyword">try</span>:
+                <span class="hljs-keyword">if</span> self.headers <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span> <span class="hljs-keyword">or</span> self.width <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+                    <span class="hljs-keyword">yield</span> i[<span class="hljs-string">&apos;thumbURL&apos;</span>]
+                <span class="hljs-keyword">else</span>:
+                    <span class="hljs-keyword">if</span> i[<span class="hljs-string">&apos;height&apos;</span>] == self.height <span class="hljs-keyword">and</span> i[<span class="hljs-string">&apos;width&apos;</span>] == self.width:
+                        <span class="hljs-keyword">yield</span> i[<span class="hljs-string">&apos;thumbURL&apos;</span>]
+            <span class="hljs-keyword">except</span> KeyError:
+                <span class="hljs-keyword">if</span> i <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+                    print(<span class="hljs-string">&apos;&#x5F53;&#x524D;&#x9875;&#x9762;&#x83B7;&#x53D6;&#x5B8C;&#x6BD5;&apos;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">down_img</span><span class="hljs-params">(self, page=<span class="hljs-number">1</span>)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;&#x4E0B;&#x8F7D;&#x56FE;&#x7247;&quot;&quot;&quot;</span>
+        <span class="hljs-keyword">for</span> url_id, url <span class="hljs-keyword">in</span> enumerate(self.read_json(page)):
+            <span class="hljs-keyword">with</span> open(f<span class="hljs-string">&apos;{self.BATH_DIR}\{page}_{url_id}.jpg&apos;</span>, <span class="hljs-string">&apos;wb&apos;</span>) <span class="hljs-keyword">as</span> f:
+                <span class="hljs-keyword">try</span>:
+                    content = requests.get(url).content
+                <span class="hljs-keyword">except</span> requests.HTTPSConnectionPool:
+                    self.err_list.append({f<span class="hljs-string">&apos;{page}{url_id}&apos;</span>:url})
+                f.write(content)
+                f.close()
+            print(f<span class="hljs-string">&apos;&#x6210;&#x529F;&#x4E0B;&#x8F7D;&#x7B2C;{url_id}&#x4E2A;&#x56FE;&#x7247;{url}&apos;</span>)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> page+<span class="hljs-number">1</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">run</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.world:
+            self.world = input(<span class="hljs-string">&apos;&#x6240;&#x9700;&#x8981;&#x722C;&#x53BB;&#x7684;&#x5173;&#x952E;&#x5B57;\n&gt;&gt;&gt;&apos;</span>).strip()
+        self.down_img()
+        pool = Pool(max_workers=self.theadings)
+        results = pool.map(self.down_img, range(<span class="hljs-number">2</span>, self.end_page))
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> results:
+            print(i)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 爬虫练习">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="selenium小玩具.html" class="navigation navigation-next " aria-label="Next page: selenium小玩具">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Python爬取百度图库","level":"1.3.4.2.1","depth":4,"next":{"title":"selenium小玩具","level":"1.3.4.2.2","depth":4,"path":"01-Python之魅/04-Python 爬虫/02-爬虫练习/selenium小玩具.md","ref":"01-Python之魅/04-Python 爬虫/02-爬虫练习/selenium小玩具.md","articles":[]},"previous":{"title":"爬虫练习","level":"1.3.4.2","depth":3,"path":"01-Python之魅/04-Python 爬虫/02-爬虫练习/README.md","ref":"01-Python之魅/04-Python 爬虫/02-爬虫练习/README.md","articles":[{"title":"Python爬取百度图库","level":"1.3.4.2.1","depth":4,"path":"01-Python之魅/04-Python 爬虫/02-爬虫练习/Python爬取百度图库.md","ref":"01-Python之魅/04-Python 爬虫/02-爬虫练习/Python爬取百度图库.md","articles":[]},{"title":"selenium小玩具","level":"1.3.4.2.2","depth":4,"path":"01-Python之魅/04-Python 爬虫/02-爬虫练习/selenium小玩具.md","ref":"01-Python之魅/04-Python 爬虫/02-爬虫练习/selenium小玩具.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","theme-comscore","splitter","-sharing","search"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"splitter":{},"search":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"CharmNight","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":18,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Poppy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"blogs","extension":null},"file":{"path":"01-Python之魅/04-Python 爬虫/02-爬虫练习/Python爬取百度图库.md","mtime":"2018-03-24T15:08:35.878Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-24T15:09:59.335Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

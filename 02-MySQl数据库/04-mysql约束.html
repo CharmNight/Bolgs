@@ -1,0 +1,936 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>mysql约束 · Poppy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="CharmNight">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="05-mysql全家桶.html" />
+    
+    
+    <link rel="prev" href="03-SQL逻辑查询语句执行顺序.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SUMMARY.html">
+            
+                <a href="../SUMMARY.html">
+            
+                    
+                    SUMMARY
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../01-Python之魅/">
+            
+                <a href="../01-Python之魅/">
+            
+                    
+                    Python之魅
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../01-Python之魅/01-Python Base/">
+            
+                <a href="../01-Python之魅/01-Python Base/">
+            
+                    
+                    Python Base
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../01-Python之魅/01-Python Base/01-Python基础之魔术方法小结.html">
+            
+                <a href="../01-Python之魅/01-Python Base/01-Python基础之魔术方法小结.html">
+            
+                    
+                    Python基础之魔术方法小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../01-Python之魅/02-Python Advanced/">
+            
+                <a href="../01-Python之魅/02-Python Advanced/">
+            
+                    
+                    Python Advanced
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../01-Python之魅/02-Python Advanced/01-Python 解密/01- Python之魅——random.html">
+            
+                <a href="../01-Python之魅/02-Python Advanced/01-Python 解密/01- Python之魅——random.html">
+            
+                    
+                     Python之魅——random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../01-Python之魅/02-Python Advanced/01-Python 解密/02- Python之魅——bisect.html">
+            
+                <a href="../01-Python之魅/02-Python Advanced/01-Python 解密/02- Python之魅——bisect.html">
+            
+                    
+                     Python之魅——bisect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../01-Python之魅/02-Python Advanced/01-Python 解密/03- Python之魅——ctypes.html">
+            
+                <a href="../01-Python之魅/02-Python Advanced/01-Python 解密/03- Python之魅——ctypes.html">
+            
+                    
+                     Python之魅——ctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../01-Python之魅/02-Python Advanced/01-Python 解密/readme.html">
+            
+                <a href="../01-Python之魅/02-Python Advanced/01-Python 解密/readme.html">
+            
+                    
+                    readme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../01-Python之魅/03-Django/">
+            
+                <a href="../01-Python之魅/03-Django/">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../01-Python之魅/04-Python 爬虫/">
+            
+                <a href="../01-Python之魅/04-Python 爬虫/">
+            
+                    
+                    Python 爬虫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../01-Python之魅/04-Python 爬虫/01-爬虫基础/">
+            
+                <a href="../01-Python之魅/04-Python 爬虫/01-爬虫基础/">
+            
+                    
+                    爬虫基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1.1" data-path="../01-Python之魅/04-Python 爬虫/01-爬虫基础/01-爬虫基础概念.html">
+            
+                <a href="../01-Python之魅/04-Python 爬虫/01-爬虫基础/01-爬虫基础概念.html">
+            
+                    
+                    爬虫基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.2" data-path="../01-Python之魅/04-Python 爬虫/01-爬虫基础/02-Urllib库基础.html">
+            
+                <a href="../01-Python之魅/04-Python 爬虫/01-爬虫基础/02-Urllib库基础.html">
+            
+                    
+                    Urllib库基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.3" data-path="../01-Python之魅/04-Python 爬虫/01-爬虫基础/03-Requests库.html">
+            
+                <a href="../01-Python之魅/04-Python 爬虫/01-爬虫基础/03-Requests库.html">
+            
+                    
+                    Requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.4" data-path="../01-Python之魅/04-Python 爬虫/01-爬虫基础/04-正则表达式练习.html">
+            
+                <a href="../01-Python之魅/04-Python 爬虫/01-爬虫基础/04-正则表达式练习.html">
+            
+                    
+                    正则表达式练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.5" data-path="../01-Python之魅/04-Python 爬虫/01-爬虫基础/05-BeautifulSoup基础.html">
+            
+                <a href="../01-Python之魅/04-Python 爬虫/01-爬虫基础/05-BeautifulSoup基础.html">
+            
+                    
+                    BeautifulSoup基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.6" data-path="../01-Python之魅/04-Python 爬虫/01-爬虫基础/06-pyquery基础.html">
+            
+                <a href="../01-Python之魅/04-Python 爬虫/01-爬虫基础/06-pyquery基础.html">
+            
+                    
+                    pyquery基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.7" data-path="../01-Python之魅/04-Python 爬虫/01-爬虫基础/07-Selenium基础.html">
+            
+                <a href="../01-Python之魅/04-Python 爬虫/01-爬虫基础/07-Selenium基础.html">
+            
+                    
+                    Selenium基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../01-Python之魅/04-Python 爬虫/02-爬虫练习/">
+            
+                <a href="../01-Python之魅/04-Python 爬虫/02-爬虫练习/">
+            
+                    
+                    爬虫练习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.2.1" data-path="../01-Python之魅/04-Python 爬虫/02-爬虫练习/Python爬取百度图库.html">
+            
+                <a href="../01-Python之魅/04-Python 爬虫/02-爬虫练习/Python爬取百度图库.html">
+            
+                    
+                    Python爬取百度图库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2.2" data-path="../01-Python之魅/04-Python 爬虫/02-爬虫练习/selenium小玩具.html">
+            
+                <a href="../01-Python之魅/04-Python 爬虫/02-爬虫练习/selenium小玩具.html">
+            
+                    
+                    selenium小玩具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    MySQl数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="01-mysql数据库安装.html">
+            
+                <a href="01-mysql数据库安装.html">
+            
+                    
+                    mysql数据库安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="02-mysql数据库基础操作.html">
+            
+                <a href="02-mysql数据库基础操作.html">
+            
+                    
+                    mysql数据库基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="03-SQL逻辑查询语句执行顺序.html">
+            
+                <a href="03-SQL逻辑查询语句执行顺序.html">
+            
+                    
+                    SQL逻辑查询语句执行顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="04-mysql约束.html">
+            
+                <a href="04-mysql约束.html">
+            
+                    
+                    mysql约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="05-mysql全家桶.html">
+            
+                <a href="05-mysql全家桶.html">
+            
+                    
+                    mysql全家桶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="06-mysql索引.html">
+            
+                <a href="06-mysql索引.html">
+            
+                    
+                    mysql索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="07-mysql慢查询日志.html">
+            
+                <a href="07-mysql慢查询日志.html">
+            
+                    
+                    mysql慢查询日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >mysql约束</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mysql&#x7EA6;&#x675F;">MySQL&#x7EA6;&#x675F;</h1>
+<h2 id="&#x4E94;&#x79CD;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;">&#x4E94;&#x79CD;&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;</h2>
+<p>&#x7EA6;&#x675F;&#x662F;&#x4E00;&#x79CD;&#x9650;&#x5236;&#xFF0C;&#x4ED6;&#x901A;&#x8FC7;&#x5BF9;&#x8868;&#x7684;&#x884C;&#x6216;&#x5217;&#x7684;&#x6570;&#x636E;&#x505A;&#x51FA;&#x9650;&#x5236;&#xFF0C;&#x6765;&#x786E;&#x4FDD;&#x8868;&#x7684;&#x6570;&#x636E;&#x7684;&#x5B8C;&#x6574;&#x9192;&#x3001;&#x552F;&#x4E00;&#x6027;    </p>
+<h3 id="&#x975E;&#x7A7A;&#x7EA6;&#x675F;">&#x975E;&#x7A7A;&#x7EA6;&#x675F;</h3>
+<p>NOT NULL&#xFF1A;&#x975E;&#x7A7A;&#x7EA6;&#x675F; &#x6307;&#x5B9A;&#x67D0;&#x5217;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;</p>
+<h4 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x975E;&#x7A7A;&#x7EA6;&#x675F;">&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x975E;&#x7A7A;&#x7EA6;&#x675F;</h4>
+<pre><code class="lang-mysql">create table db1(
+    id int not null,
+      name varchar(30) default &apos;asd&apos; not null,
+      age int null
+)
+</code></pre>
+<h4 id="&#x53D6;&#x6D88;&#x975E;&#x7A7A;&#x7EA6;&#x675F;">&#x53D6;&#x6D88;&#x975E;&#x7A7A;&#x7EA6;&#x675F;</h4>
+<pre><code class="lang-mysql">alter table db1 modify name varchar(30) default &apos;asd&apos;
+</code></pre>
+<p>&#x6216;</p>
+<pre><code class="lang-mysql">alter table db1 change name name varchar(30) default &apos;asd&apos;
+</code></pre>
+<h4 id="&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x975E;&#x7A7A;&#x7EA6;&#x675F;">&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x975E;&#x7A7A;&#x7EA6;&#x675F;</h4>
+<pre><code class="lang-mysql">alter table db1 add modify age int not null
+</code></pre>
+<p>&#x6216;</p>
+<pre><code class="lang-mysql">alter table db1 change age age int not null
+</code></pre>
+<h3 id="&#x552F;&#x4E00;&#x7EA6;&#x675F;">&#x552F;&#x4E00;&#x7EA6;&#x675F;</h3>
+<p>UNIQUE&#xFF1A; &#x552F;&#x4E00;&#x7EA6;&#x675F; &#x6307;&#x5B9A;&#x67D0;&#x5217;&#x4E0D;&#x80FD;&#x91CD;&#x590D;</p>
+<h4 id="&#x5217;&#x7EA7;&#x7EA6;&#x675F;&#x8BED;&#x6CD5;&#x5EFA;&#x7ACB;&#x7EA6;&#x675F;">&#x5217;&#x7EA7;&#x7EA6;&#x675F;&#x8BED;&#x6CD5;&#x5EFA;&#x7ACB;&#x7EA6;&#x675F;</h4>
+<pre><code class="lang-mysql">create table test_unique(
+    id int not null unique,
+    age int 
+)
+</code></pre>
+<pre><code class="lang-mysql">insert into test_unique values(1,2);    # success
+insert into test_unique values(2,2);    # success
+insert into test_unique values(2,3);    # [Err] 1062 - Duplicate entry &apos;2&apos; for key &apos;id&apos;
+</code></pre>
+<h4 id="&#x8868;&#x7EA7;&#x7EA6;&#x675F;&#x8BED;&#x6CD5;&#x5EFA;&#x7ACB;&#x7EA6;&#x675F;">&#x8868;&#x7EA7;&#x7EA6;&#x675F;&#x8BED;&#x6CD5;&#x5EFA;&#x7ACB;&#x7EA6;&#x675F;</h4>
+<pre><code class="lang-mysql">create table unique_test1(
+    id int not NULL,
+    test_name varchar(255),
+    test_pass varchar(255),
+    constraint test_unique unique(id,test_name)
+)
+</code></pre>
+<h4 id="&#x6DFB;&#x52A0;&#x552F;&#x4E00;&#x7EA6;&#x675F;">&#x6DFB;&#x52A0;&#x552F;&#x4E00;&#x7EA6;&#x675F;</h4>
+<pre><code class="lang-mysql">alter table unique_test1 add unique(id)
+</code></pre>
+<p>&#x6216;</p>
+<pre><code class="lang-mysql">alter table unique_test1 modify id int not null unique
+</code></pre>
+<h4 id="&#x5220;&#x9664;&#x552F;&#x4E00;&#x7EA6;&#x675F;">&#x5220;&#x9664;&#x552F;&#x4E00;&#x7EA6;&#x675F;</h4>
+<pre><code class="lang-mysql">alter table unique_test1 drop index test_unique
+</code></pre>
+<p>&#x6216;</p>
+<pre><code class="lang-mysql">alter table unique_test1 modify id int not null
+</code></pre>
+<h3 id="&#x4E3B;&#x952E;&#x7EA6;&#x675F;">&#x4E3B;&#x952E;&#x7EA6;&#x675F;</h3>
+<p>PRIMARY KEY&#xFF1A;&#x4E3B;&#x952E; &#x6307;&#x5B9A;&#x8BE5;&#x5217;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x552F;&#x4E00;&#x7684;&#x6807;&#x8BC6;&#x8BE5;&#x5217;&#x8BB0;&#x5F55;</p>
+<ul>
+<li>&#x4E3B;&#x952E;&#x7EA6;&#x675F;&#x76F8;&#x5F53;&#x4E8E;&#x975E;&#x7A7A;&#x7EA6;&#x675F;&#x548C;&#x552F;&#x4E00;&#x7EA6;&#x675F;&#x3002;</li>
+<li>&#x6BCF;&#x4E2A;&#x8868;&#x53EA;&#x5141;&#x8BB8;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x4E3B;&#x952E;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x4E3B;&#x952E;&#x53EF;&#x4EE5;&#x7531;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x5217;&#x7EC4;&#x6210;&#xFF0C;&#x8FD9;&#x4E9B;&#x5217;&#x7EC4;&#x5408;&#x4E0D;&#x80FD;&#x91CD;&#x590D;</li>
+<li>&#x6807;&#x51C6;SQL &#x5141;&#x8BB8;&#x7ED9;&#x4E3B;&#x952E;&#x81EA;&#x884C;&#x547D;&#x540D;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;MySQL&#x6765;&#x8BF4;&#x81EA;&#x5DF1;&#x7684;&#x540D;&#x5B57;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x610F;&#x4E49;&#xFF0C;&#x603B;&#x662F;&#x9ED8;&#x8BA4;&#x4E3A;PRIMARY</li>
+</ul>
+<p>&#x7B80;&#x5355;&#x8BF4;&#xFF1A;&#x4E3B;&#x952E;&#x8FD9;&#x4E00;&#x884C;&#x7684;&#x6570;&#x636E;<strong>&#x4E0D;&#x80FD;&#x91CD;&#x590D;</strong>&#x4E14;<strong>&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;</strong>&#x3002;</p>
+<h4 id="&#x5217;&#x7EA7;&#x7EA6;&#x675F;&#x8BED;&#x6CD5;&#x5EFA;&#x7ACB;&#x7EA6;&#x675F;">&#x5217;&#x7EA7;&#x7EA6;&#x675F;&#x8BED;&#x6CD5;&#x5EFA;&#x7ACB;&#x7EA6;&#x675F;</h4>
+<pre><code class="lang-mysql">create table test_primary(
+    id int not null primary key,
+    name varchar(50)
+)
+</code></pre>
+<h4 id="&#x8868;&#x7EA7;&#x7EA6;&#x675F;&#x8BED;&#x6CD5;&#x5EFA;&#x7ACB;&#x7EA6;&#x675F;">&#x8868;&#x7EA7;&#x7EA6;&#x675F;&#x8BED;&#x6CD5;&#x5EFA;&#x7ACB;&#x7EA6;&#x675F;</h4>
+<pre><code class="lang-mysql">create table primary_test2(
+    id int not null,
+    name varchar(50),
+    constraint test_pk primary key(id)
+      # &#x6307;&#x5B9A;&#x4E3B;&#x952E;&#x7EA6;&#x675F;&#x4E3A; test_pk &#xFF0C;&#x5BF9;&#x5927;&#x90E8;&#x5206;&#x6570;&#x636E;&#x5E93;&#x6709;&#x6548; &#x4F46;&#x5BF9;&#x4E8E;MySql&#x65E0;&#x6548;&#xFF0C;&#x6B64;&#x4E3B;&#x952E;&#x7EA6;&#x675F;&#x540D;&#x4ECD;&#x4E3A;PRIMARY
+)
+</code></pre>
+<h4 id="&#x521B;&#x5EFA;&#x590D;&#x5408;&#x4E3B;&#x952E;">&#x521B;&#x5EFA;&#x590D;&#x5408;&#x4E3B;&#x952E;</h4>
+<p>&#x4E3B;&#x952E;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x5217;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7531;&#x8868;&#x4E2D;&#x7684;&#x4E24;&#x5217;&#x6216;&#x591A;&#x5217;&#x6765;&#x5171;&#x540C;&#x6807;&#x8BC6;&#x3002;&#x2014;&#x2014;&#x590D;&#x5408;&#x4E3B;&#x952E;</p>
+<pre><code class="lang-mysql">create table primary_test3(
+    id int not null,
+      name varchar(50) not null,
+      primary key(id,name)
+)
+</code></pre>
+<p>&#x4E3B;&#x952E;&#x5217;&#x81EA;&#x589E;&#x957F;&#x7279;&#x6027;&#xFF1A;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#x5217;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x6574;&#x578B;&#xFF0C;&#x800C;&#x4E14;&#x8BE5;&#x5217;&#x4F5C;&#x4E3A;&#x4E3B;&#x952E;&#x5217;&#xFF0C;&#x5219;&#x53EF;&#x6307;&#x5B9A;&#x8BE5;&#x5217;&#x5177;&#x6709;&#x81EA;&#x589E;&#x957F;&#x529F;&#x80FD;</p>
+<h4 id="&#x5217;&#x7EA7;&#x7EA6;&#x675F;&#x8BED;&#x6CD5;&#x6DFB;&#x52A0;&#x4E3B;&#x952E;">&#x5217;&#x7EA7;&#x7EA6;&#x675F;&#x8BED;&#x6CD5;&#x6DFB;&#x52A0;&#x4E3B;&#x952E;</h4>
+<pre><code class="lang-mysql">alter table primary_test2 modify id int not null primary key
+</code></pre>
+<h4 id="&#x8868;&#x7EA7;&#x7EA6;&#x675F;&#x8BED;&#x6CD5;&#x6DFB;&#x52A0;&#x4E3B;&#x952E;">&#x8868;&#x7EA7;&#x7EA6;&#x675F;&#x8BED;&#x6CD5;&#x6DFB;&#x52A0;&#x4E3B;&#x952E;</h4>
+<pre><code class="lang-mysql">alter table primary_test2 add primary key(id,name)
+</code></pre>
+<h4 id="&#x5220;&#x9664;&#x4E3B;&#x952E;">&#x5220;&#x9664;&#x4E3B;&#x952E;</h4>
+<pre><code class="lang-mysql">alter table primary_test2 drop primary key
+</code></pre>
+<h5 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h5>
+<pre><code class="lang-mysql"># &#x5982;&#x679C;&#x8BE5;&#x4E3B;&#x952E;&#x5177;&#x6709;&#x81EA;&#x589E;&#x7279;&#x6027;&#xFF0C;&#x5219;&#x5728;&#x5220;&#x9664;&#x4E3B;&#x952E;&#x524D;&#x9700;&#x8981;&#x5C06;&#x81EA;&#x589E;&#x7279;&#x6027;&#x53D6;&#x6D88;&#xFF0C;&#x5728;&#x5220;&#x9664;&#x4E3B;&#x952E;
+alter table primary_test2 modify id int not null, drop primary key
+</code></pre>
+<h3 id="&#x5916;&#x952E;&#x7EA6;&#x675F;">&#x5916;&#x952E;&#x7EA6;&#x675F;</h3>
+<p>FOREIGN KEY&#xFF1A;&#x5916;&#x952E; &#x6307;&#x5B9A;&#x8BE5;&#x884C;&#x8BB0;&#x5F55;&#x4ECE;&#x5C5E;&#x4E3B;&#x8868;&#x7684;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#xFF0C;&#x7528;&#x4E8E;&#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;</p>
+<h4 id="&#x5B9A;&#x4E49;&#x5916;&#x952E;&#x7684;&#x6761;&#x4EF6;">&#x5B9A;&#x4E49;&#x5916;&#x952E;&#x7684;&#x6761;&#x4EF6;</h4>
+<ul>
+<li>&#x5916;&#x952E;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x6BB5;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4FDD;&#x6301;&#x4E00;&#x81F4;,&#x4E14;&#x88AB;&#x5173;&#x8054;&#x7684;&#x5B57;&#x6BB5;(&#x5373;references&#x6307;&#x5B9A;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x8868;&#x7684;&#x5B57;&#x6BB5;)&#xFF0C;&#x5FC5;&#x987B;&#x4FDD;&#x8BC1;&#x552F;&#x4E00;</li>
+<li>&#x6240;&#x6709;tables&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x5FC5;&#x987B;&#x662F;InnoDB&#x7C7B;&#x578B;.</li>
+<li>&#x5916;&#x952E;&#x7684;&#x7EA6;&#x675F;4&#x79CD;&#x7C7B;&#x578B;: 1.RESTRICT 2. NO ACTION 3.CASCADE 4.SET NULL</li>
+<li>&#x5EFA;&#x8BAE;<ol>
+<li>&#x5982;&#x679C;&#x9700;&#x8981;&#x5916;&#x952E;&#x7EA6;&#x675F;,&#x6700;&#x597D;&#x521B;&#x5EFA;&#x8868;&#x540C;&#x65F6;&#x521B;&#x5EFA;&#x5916;&#x952E;&#x7EA6;&#x675F;.</li>
+<li>&#x5982;&#x679C;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x7EA7;&#x8054;&#x5173;&#x7CFB;,&#x5220;&#x9664;&#x65F6;&#x6700;&#x597D;&#x8BBE;&#x7F6E;&#x4E3A; SET NULL.</li>
+</ol>
+</li>
+</ul>
+<h4 id="&#x521B;&#x5EFA;&#x5916;&#x952E;&#x7EA6;&#x675F;">&#x521B;&#x5EFA;&#x5916;&#x952E;&#x7EA6;&#x675F;</h4>
+<pre><code class="lang-mysql">CREATE TABLE IF NOT EXISTS dept (
+    did int not null auto_increment PRIMARY KEY,
+    dname VARCHAR(50) not null COMMENT &apos;&#x90E8;&#x95E8;&#x540D;&#x79F0;&apos;
+)ENGINE=INNODB DEFAULT charset utf8;
+
+CREATE TABLE IF NOT EXISTS person(
+    id int not null auto_increment PRIMARY KEY,
+    name VARCHAR(50) not null,
+    age TINYINT(4) null DEFAULT 0,
+    sex enum(&apos;&#x7537;&apos;,&apos;&#x5973;&apos;) NOT NULL DEFAULT &apos;&#x7537;&apos;,
+    salary decimal(10,2) NULL DEFAULT &apos;250.00&apos;,
+    hire_date date NOT NULL,
+    dept_id int(11) DEFAULT NULL,
+&#x3000;  FOREIGN KEY(dept_id) REFERENCES dept(did) -- &#x6DFB;&#x52A0;&#x5916;&#x952E;&#x7EA6;&#x675F;
+     #&#x5982;&#x679C;&#x4F7F;&#x7528;&#x8868;&#x7EA7;&#x7EA6;&#x675F;&#x8BED;&#x6CD5;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x4F7F;&#x7528;foreign key&#x6307;&#x5B9A;&#x672C;&#x8868;&#x7684;&#x5916;&#x952E;&#x5217;&#xFF0C;&#x5982;&#x679C;&#x521B;&#x5EFA;&#x5916;&#x952E;&#x7EA6;&#x675F;&#x65F6;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x7EA6;&#x675F;&#x540D;&#xFF0C;   
+    #&#x5219;mysql&#x4F1A;&#x4E3A;&#x8BE5;&#x5916;&#x952E;&#x7EA6;&#x675F;&#x547D;&#x540D;&#x4E3A;table_name_ibfk_n,&#x5176;&#x4E2D;table_name&#x662F;&#x4ECE;&#x8868;&#x7684;&#x8868;&#x540D;&#xFF0C;n&#x662F;&#x4ECE;1&#x5F00;&#x59CB;&#x7684;&#x6574;&#x6570;  
+)ENGINE = INNODB DEFAULT charset utf8;
+</code></pre>
+<h4 id="&#x5EFA;&#x7ACB;&#x591A;&#x5217;&#x7EC4;&#x5408;&#x5916;&#x952E;&#x7EA6;&#x675F;">&#x5EFA;&#x7ACB;&#x591A;&#x5217;&#x7EC4;&#x5408;&#x5916;&#x952E;&#x7EA6;&#x675F;</h4>
+<pre><code class="lang-mysql">create table teacher_tb(
+    name varchar(255),
+      pass varchar(255),
+      primary key(name,pass)
+);
+
+create table student_tb(
+    id int auto_increment not null primary key,
+      name varchar(50) not null,
+      py_pass varchar(255),
+      py_name varchar(255),
+      constraint fk_stu foreign key(py_pass,py_name) references teacher_tb(name,pass)
+)
+</code></pre>
+<h4 id="&#x5220;&#x9664;&#x5916;&#x952E;&#x7EA6;&#x675F;">&#x5220;&#x9664;&#x5916;&#x952E;&#x7EA6;&#x675F;</h4>
+<pre><code class="lang-mysql">alter table student_tb drop foreign key fk_stu
+</code></pre>
+<h4 id="&#x6DFB;&#x52A0;&#x5916;&#x952E;&#x7EA6;&#x675F;">&#x6DFB;&#x52A0;&#x5916;&#x952E;&#x7EA6;&#x675F;</h4>
+<pre><code class="lang-mysql">alter table student_tb add foreign key (py_pass,py_name) references teacher_tb(name,pass)
+</code></pre>
+<h4 id="&#x5916;&#x952E;&#x7EA6;&#x675F;&#x53C2;&#x7167;&#x81EA;&#x8EAB;&#xFF0C;&#x81EA;&#x7EA6;&#x675F;">&#x5916;&#x952E;&#x7EA6;&#x675F;&#x53C2;&#x7167;&#x81EA;&#x8EAB;&#xFF0C;&#x81EA;&#x7EA6;&#x675F;</h4>
+<pre><code>1. CASCADE: &#x4ECE;&#x7236;&#x8868;&#x4E2D;&#x5220;&#x9664;&#x6216;&#x66F4;&#x65B0;&#x5BF9;&#x5E94;&#x7684;&#x884C;&#xFF0C;&#x540C;&#x65F6;&#x81EA;&#x52A8;&#x7684;&#x5220;&#x9664;&#x6216;&#x66F4;&#x65B0;&#x81EA;&#x8868;&#x4E2D;&#x5339;&#x914D;&#x7684;&#x884C;&#x3002;ON DELETE CANSCADE&#x548C;ON UPDATE CANSCADE&#x90FD;&#x88AB;InnoDB&#x6240;&#x652F;&#x6301;&#x3002;
+
+ 2. SET NULL: &#x4ECE;&#x7236;&#x8868;&#x4E2D;&#x5220;&#x9664;&#x6216;&#x66F4;&#x65B0;&#x5BF9;&#x5E94;&#x7684;&#x884C;&#xFF0C;&#x540C;&#x65F6;&#x5C06;&#x5B50;&#x8868;&#x4E2D;&#x7684;&#x5916;&#x952E;&#x5217;&#x8BBE;&#x4E3A;&#x7A7A;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x4E9B;&#x5728;&#x5916;&#x952E;&#x5217;&#x6CA1;&#x6709;&#x88AB;&#x8BBE;&#x4E3A;NOT NULL&#x65F6;&#x624D;&#x6709;&#x6548;&#x3002;ON DELETE SET NULL&#x548C;ON UPDATE SET SET NULL&#x90FD;&#x88AB;InnoDB&#x6240;&#x652F;&#x6301;&#x3002;
+
+ 3. NO ACTION: InnoDB&#x62D2;&#x7EDD;&#x5220;&#x9664;&#x6216;&#x8005;&#x66F4;&#x65B0;&#x7236;&#x8868;&#x3002;
+
+ 4. RESTRICT: &#x62D2;&#x7EDD;&#x5220;&#x9664;&#x6216;&#x8005;&#x66F4;&#x65B0;&#x7236;&#x8868;&#x3002;&#x6307;&#x5B9A;RESTRICT&#xFF08;&#x6216;&#x8005;NO ACTION&#xFF09;&#x548C;&#x5FFD;&#x7565;ON DELETE&#x6216;&#x8005;ON UPDATE&#x9009;&#x9879;&#x7684;&#x6548;&#x679C;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;
+</code></pre><pre><code class="lang-mysql">[constraint [foreign_key_name]] foreign key 
+[index_name] index_col_name1[,index_col_name2..]) 
+references tb_name (index_col_name1[,index_col_name..]) 
+[ON DELETE RESTRICT | CASCADE | SET NULL | NO ACTION]
+[ON UPDATE RESTRICT | CASCADE | SET NULL | NO ACTION]
+</code></pre>
+<h5 id="&#x5916;&#x952E;&#x7EA6;&#x675F;&#x4F7F;&#x7528;&#x6700;&#x591A;&#x7684;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;">&#x5916;&#x952E;&#x7EA6;&#x675F;&#x4F7F;&#x7528;&#x6700;&#x591A;&#x7684;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;</h5>
+<ol>
+<li>&#x7236;&#x8868;&#x66F4;&#x65B0;&#x65F6;&#x5B50;&#x8868;&#x4E5F;&#x66F4;&#x65B0;&#xFF0C;&#x7236;&#x8868;&#x5220;&#x9664;&#x65F6;&#x5982;&#x679C;&#x5B50;&#x8868;&#x6709;&#x5339;&#x914D;&#x7684;&#x9879;&#xFF0C;&#x5220;&#x9664;&#x5931;&#x8D25;&#xFF1B;</li>
+<li>&#x7236;&#x8868;&#x66F4;&#x65B0;&#x65F6;&#x5B50;&#x8868;&#x4E5F;&#x66F4;&#x65B0;&#xFF0C;&#x7236;&#x8868;&#x5220;&#x9664;&#x65F6;&#x5B50;&#x8868;&#x5339;&#x914D;&#x7684;&#x9879;&#x4E5F;&#x5220;&#x9664;&#x3002;</li>
+</ol>
+<pre><code>&#x524D;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x5728;&#x5916;&#x952E;&#x5B9A;&#x4E49;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;ON UPDATE CASCADE ON DELETE RESTRICT&#xFF1B;
+&#x540E;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ON UPDATE CASCADE ON DELETE CASCADE&#x3002;
+</code></pre><h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
+<ul>
+<li>&#x63D2;&#x5165;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5148;&#x63D2;&#x5165;&#x4E3B;&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x518D;&#x63D2;&#x5165;&#x4ECE;&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+<li>&#x5220;&#x9664;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5148;&#x5220;&#x9664;&#x4ECE;&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x518D;&#x5220;&#x9664;&#x4E3B;&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<h3 id="&#x68C0;&#x67E5;&#x7EA6;&#x675F;">&#x68C0;&#x67E5;&#x7EA6;&#x675F;</h3>
+<p>CHECK:  &#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x5FC5;&#x987B;&#x6EE1;&#x8DB3;&#x8BE5;&#x8868;&#x8FBE;&#x5F0F;&#xFF08;mysql&#x4E0D;&#x652F;&#x6301;check&#x7EA6;&#x675F;&#xFF09;  </p>
+<pre><code class="lang-mysql">CREATE TABLE class(
+  cla_id INT(6) AUTO_INCREMENT PRIMARY KEY,
+  cla_name VARCHAR(30) NOT NULL UNIQUE,
+  CHECK(cla_id&gt;0)
+);
+</code></pre>
+<h3 id="&#x5176;&#x4ED6;&#x7EA6;&#x675F;">&#x5176;&#x4ED6;&#x7EA6;&#x675F;</h3>
+<h4 id="&#x9ED8;&#x8BA4;&#x503C;&#x7EA6;&#x675F;">&#x9ED8;&#x8BA4;&#x503C;&#x7EA6;&#x675F;</h4>
+<p>DEFAULT&#xFF1A; &#x9ED8;&#x8BA4;&#x503C;&#x7EA6;&#x675F; &#x6307;&#x5B9A;&#x67D0;&#x5217;&#x7684;&#x9ED8;&#x8BA4;&#x503C;</p>
+<h5 id="&#x521B;&#x5EFA;&#x65F6;&#x6DFB;&#x52A0;&#x7EA6;&#x675F;">&#x521B;&#x5EFA;&#x65F6;&#x6DFB;&#x52A0;&#x7EA6;&#x675F;</h5>
+<pre><code class="lang-mysql">create table default_test(
+    id int not null auto_increment primary key,
+     name varchar(25),
+      age int not null default 18
+);
+</code></pre>
+<h5 id="&#x6DFB;&#x52A0;&#x9ED8;&#x8BA4;&#x503C;&#x7EA6;&#x675F;">&#x6DFB;&#x52A0;&#x9ED8;&#x8BA4;&#x503C;&#x7EA6;&#x675F;</h5>
+<pre><code class="lang-mysql">alter table default_test modify age int not null default 18
+</code></pre>
+<p>&#x6216;</p>
+<pre><code class="lang-mysql">alter table default_test change age age int not null default 18
+</code></pre>
+<h5 id="&#x5220;&#x9664;&#x9ED8;&#x8BA4;&#x503C;&#x7EA6;&#x675F;">&#x5220;&#x9664;&#x9ED8;&#x8BA4;&#x503C;&#x7EA6;&#x675F;</h5>
+<pre><code class="lang-mysql"> alter table default_test modify age int not null
+</code></pre>
+<p>&#x6216;</p>
+<pre><code class="lang-mysql">alter table default_test change age age int not null
+</code></pre>
+<h4 id="&#x81EA;&#x589E;&#x957F;&#x7EA6;&#x675F;">&#x81EA;&#x589E;&#x957F;&#x7EA6;&#x675F;</h4>
+<p>AUTO_INCREMENT: &#x8BE5;&#x5217;&#x6570;&#x636E;&#x81EA;&#x589E;&#x957F;&#xFF0C;&#x4E0E;&#x7EA6;&#x675F;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF08;&#x4E0E;&#x4E3B;&#x952E;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF09;&#x3002;&#x6BCF;&#x4E2A;&#x8868;&#x4E2D;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x81EA;&#x589E;&#x957F;&#x7EA6;&#x675F;</p>
+<h5 id="&#x521B;&#x5EFA;&#x65F6;&#x6DFB;&#x52A0;&#x81EA;&#x589E;&#x957F;&#x7EA6;&#x675F;">&#x521B;&#x5EFA;&#x65F6;&#x6DFB;&#x52A0;&#x81EA;&#x589E;&#x957F;&#x7EA6;&#x675F;</h5>
+<pre><code class="lang-mysql">create table auto_test(
+    id int not null auto_increment primary key,
+     name varchar(25)
+);
+</code></pre>
+<h5 id="&#x6DFB;&#x52A0;&#x81EA;&#x589E;&#x957F;&#x7EA6;&#x675F;">&#x6DFB;&#x52A0;&#x81EA;&#x589E;&#x957F;&#x7EA6;&#x675F;</h5>
+<pre><code class="lang-mysql">alter table default_test modify id int not null auto_increment
+</code></pre>
+<h5 id="&#x5220;&#x9664;&#x81EA;&#x589E;&#x957F;&#x7EA6;&#x675F;">&#x5220;&#x9664;&#x81EA;&#x589E;&#x957F;&#x7EA6;&#x675F;</h5>
+<pre><code class="lang-mysql">alter table auto_test modify id int not null
+</code></pre>
+<h4 id="&#x65E0;&#x7B26;&#x53F7;&#x7EA6;&#x675F;">&#x65E0;&#x7B26;&#x53F7;&#x7EA6;&#x675F;</h4>
+<p>UNSIGNED: &#x65E0;&#x7B26;&#x53F7;&#x7EA6;&#x675F;&#x4EC5;&#x4F5C;&#x7528;&#x4E8E;&#x6570;&#x503C;&#x7C7B;&#x578B;</p>
+<h5 id="&#x521B;&#x5EFA;&#x65F6;&#x6DFB;&#x52A0;">&#x521B;&#x5EFA;&#x65F6;&#x6DFB;&#x52A0;</h5>
+<pre><code class="lang-mysql">CREATE TABLE t_user(user_id INT(10) UNSIGNED);
+</code></pre>
+<h5 id="&#x901A;&#x8FC7;alter&#x8BED;&#x53E5;">&#x901A;&#x8FC7;ALTER&#x8BED;&#x53E5;</h5>
+<pre><code class="lang-mysql">ALTER TABLE t_user MODIFY user_id INT(10) UNSIGNED;
+ALTER TABLE t_user CHANGE user_id user_id INT(10) UNSIGNED;
+
+
+ALTER TABLE t_user MODIFY user_id INT(10);
+ALTER TABLE t_user CHANGE user_id user_id INT(10);
+</code></pre>
+<h4 id="zerofill&#xFF08;&#x96F6;&#x586B;&#x5145;&#xFF09;">ZEROFILL&#xFF08;&#x96F6;&#x586B;&#x5145;&#xFF09;</h4>
+<h5 id="&#x5728;&#x521B;&#x5EFA;&#x8868;&#x7684;&#x65F6;&#x5019;&#x6DFB;&#x52A0;">&#x5728;&#x521B;&#x5EFA;&#x8868;&#x7684;&#x65F6;&#x5019;&#x6DFB;&#x52A0;</h5>
+<pre><code class="lang-mysql">create table zero_test(
+    id int not null auto_increment primary key,
+      age int zerofill
+);
+</code></pre>
+<h5 id="&#x6DFB;&#x52A0;">&#x6DFB;&#x52A0;</h5>
+<pre><code class="lang-mysql">alter table zer_test modify age int zerofill
+</code></pre>
+<p>&#x6216;</p>
+<pre><code class="lang-mysql">alter table zer_test change age age int zerofill
+</code></pre>
+<h5 id="&#x5220;&#x9664;">&#x5220;&#x9664;</h5>
+<pre><code class="lang-mysql">alter table zero_test modify age int
+</code></pre>
+<p>&#x6216;</p>
+<pre><code class="lang-mysql">alter table zero_test change age age int
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03-SQL逻辑查询语句执行顺序.html" class="navigation navigation-prev " aria-label="Previous page: SQL逻辑查询语句执行顺序">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="05-mysql全家桶.html" class="navigation navigation-next " aria-label="Next page: mysql全家桶">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"mysql约束","level":"1.4.4","depth":2,"next":{"title":"mysql全家桶","level":"1.4.5","depth":2,"path":"02-MySQl数据库/05-mysql全家桶.md","ref":"02-MySQl数据库/05-mysql全家桶.md","articles":[]},"previous":{"title":"SQL逻辑查询语句执行顺序","level":"1.4.3","depth":2,"path":"02-MySQl数据库/03-SQL逻辑查询语句执行顺序.md","ref":"02-MySQl数据库/03-SQL逻辑查询语句执行顺序.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","theme-comscore","splitter","-sharing","search"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"splitter":{},"search":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"CharmNight","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":18,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Poppy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"blogs","extension":null},"file":{"path":"02-MySQl数据库/04-mysql约束.md","mtime":"2018-03-24T15:08:35.878Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-24T15:09:59.335Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

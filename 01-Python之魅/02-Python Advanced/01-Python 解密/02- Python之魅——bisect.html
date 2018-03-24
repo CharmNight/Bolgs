@@ -1,0 +1,860 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title> Python之魅——bisect · Poppy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="CharmNight">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03- Python之魅——ctypes.html" />
+    
+    
+    <link rel="prev" href="01- Python之魅——random.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../SUMMARY.html">
+            
+                <a href="../../../SUMMARY.html">
+            
+                    
+                    SUMMARY
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Python之魅
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../01-Python Base/">
+            
+                <a href="../../01-Python Base/">
+            
+                    
+                    Python Base
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../01-Python Base/01-Python基础之魔术方法小结.html">
+            
+                <a href="../../01-Python Base/01-Python基础之魔术方法小结.html">
+            
+                    
+                    Python基础之魔术方法小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Python Advanced
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="01- Python之魅——random.html">
+            
+                <a href="01- Python之魅——random.html">
+            
+                    
+                     Python之魅——random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2.2" data-path="02- Python之魅——bisect.html">
+            
+                <a href="02- Python之魅——bisect.html">
+            
+                    
+                     Python之魅——bisect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="03- Python之魅——ctypes.html">
+            
+                <a href="03- Python之魅——ctypes.html">
+            
+                    
+                     Python之魅——ctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    readme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../03-Django/">
+            
+                <a href="../../03-Django/">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../04-Python 爬虫/">
+            
+                <a href="../../04-Python 爬虫/">
+            
+                    
+                    Python 爬虫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../04-Python 爬虫/01-爬虫基础/">
+            
+                <a href="../../04-Python 爬虫/01-爬虫基础/">
+            
+                    
+                    爬虫基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1.1" data-path="../../04-Python 爬虫/01-爬虫基础/01-爬虫基础概念.html">
+            
+                <a href="../../04-Python 爬虫/01-爬虫基础/01-爬虫基础概念.html">
+            
+                    
+                    爬虫基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.2" data-path="../../04-Python 爬虫/01-爬虫基础/02-Urllib库基础.html">
+            
+                <a href="../../04-Python 爬虫/01-爬虫基础/02-Urllib库基础.html">
+            
+                    
+                    Urllib库基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.3" data-path="../../04-Python 爬虫/01-爬虫基础/03-Requests库.html">
+            
+                <a href="../../04-Python 爬虫/01-爬虫基础/03-Requests库.html">
+            
+                    
+                    Requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.4" data-path="../../04-Python 爬虫/01-爬虫基础/04-正则表达式练习.html">
+            
+                <a href="../../04-Python 爬虫/01-爬虫基础/04-正则表达式练习.html">
+            
+                    
+                    正则表达式练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.5" data-path="../../04-Python 爬虫/01-爬虫基础/05-BeautifulSoup基础.html">
+            
+                <a href="../../04-Python 爬虫/01-爬虫基础/05-BeautifulSoup基础.html">
+            
+                    
+                    BeautifulSoup基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.6" data-path="../../04-Python 爬虫/01-爬虫基础/06-pyquery基础.html">
+            
+                <a href="../../04-Python 爬虫/01-爬虫基础/06-pyquery基础.html">
+            
+                    
+                    pyquery基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.7" data-path="../../04-Python 爬虫/01-爬虫基础/07-Selenium基础.html">
+            
+                <a href="../../04-Python 爬虫/01-爬虫基础/07-Selenium基础.html">
+            
+                    
+                    Selenium基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../../04-Python 爬虫/02-爬虫练习/">
+            
+                <a href="../../04-Python 爬虫/02-爬虫练习/">
+            
+                    
+                    爬虫练习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.2.1" data-path="../../04-Python 爬虫/02-爬虫练习/Python爬取百度图库.html">
+            
+                <a href="../../04-Python 爬虫/02-爬虫练习/Python爬取百度图库.html">
+            
+                    
+                    Python爬取百度图库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2.2" data-path="../../04-Python 爬虫/02-爬虫练习/selenium小玩具.html">
+            
+                <a href="../../04-Python 爬虫/02-爬虫练习/selenium小玩具.html">
+            
+                    
+                    selenium小玩具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../02-MySQl数据库/">
+            
+                <a href="../../../02-MySQl数据库/">
+            
+                    
+                    MySQl数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../02-MySQl数据库/01-mysql数据库安装.html">
+            
+                <a href="../../../02-MySQl数据库/01-mysql数据库安装.html">
+            
+                    
+                    mysql数据库安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../02-MySQl数据库/02-mysql数据库基础操作.html">
+            
+                <a href="../../../02-MySQl数据库/02-mysql数据库基础操作.html">
+            
+                    
+                    mysql数据库基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../02-MySQl数据库/03-SQL逻辑查询语句执行顺序.html">
+            
+                <a href="../../../02-MySQl数据库/03-SQL逻辑查询语句执行顺序.html">
+            
+                    
+                    SQL逻辑查询语句执行顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../02-MySQl数据库/04-mysql约束.html">
+            
+                <a href="../../../02-MySQl数据库/04-mysql约束.html">
+            
+                    
+                    mysql约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../../02-MySQl数据库/05-mysql全家桶.html">
+            
+                <a href="../../../02-MySQl数据库/05-mysql全家桶.html">
+            
+                    
+                    mysql全家桶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../../02-MySQl数据库/06-mysql索引.html">
+            
+                <a href="../../../02-MySQl数据库/06-mysql索引.html">
+            
+                    
+                    mysql索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../../02-MySQl数据库/07-mysql慢查询日志.html">
+            
+                <a href="../../../02-MySQl数据库/07-mysql慢查询日志.html">
+            
+                    
+                    mysql慢查询日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." > Python之魅——bisect</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="bisect">bisect</h1>
+<p>&#x200B;        &#x2014;&#x2014;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;python&#x7684;&#x9488;&#x5BF9;<strong>&#x6709;&#x5E8F;</strong> &#x6570;&#x7EC4;&#x7684;&#x63D2;&#x5165;&#x548C;&#x6392;&#x5E8F;&#x64CD;&#x4F5C;&#x7684;&#x4E00;&#x4E2A;&#x6A21;&#x5757;</p>
+<p>&#x9996;&#x5148;&#x770B;&#x770B;bisect&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x4E2D;&#x90FD;&#x6709;&#x4EC0;&#x4E48;&#x65B9;&#x6CD5;&#x5427;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> bisect
+[print(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> dir(bisect)<span class="hljs-keyword">if</span> i.find(<span class="hljs-string">&apos;__&apos;</span>) == <span class="hljs-number">-1</span>]
+
+bisect
+bisect_left
+bisect_right
+insort
+insort_left
+insort_right
+</code></pre>
+<p>bisect &#x5C31;&#x662F;&#x8C03;&#x7528;&#x7684;bisect_right</p>
+<p>insort &#x5C31;&#x662F;&#x8C03;&#x7528; &#x7684;insort_right</p>
+<hr>
+<h2 id="bisect">bisect</h2>
+<p>&#x200B;        &#x2014;&#x2014; &#x5176;&#x5B9E;bisect &#x5C31;&#x662F;&#x5728;&#x8C03;&#x7528; bisect_right</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> bisect
+
+li = [<span class="hljs-number">1</span>, <span class="hljs-number">23</span>, <span class="hljs-number">45</span>, <span class="hljs-number">12</span>, <span class="hljs-number">23</span>, <span class="hljs-number">42</span>, <span class="hljs-number">54</span>, <span class="hljs-number">123</span>, <span class="hljs-number">14</span>, <span class="hljs-number">52</span>, <span class="hljs-number">3</span>]
+li.sort()
+print(li)
+print(bisect.bisect(li, <span class="hljs-number">3</span>))
+</code></pre>
+<pre><code>[1, 3, 12, 14, 23, 23, 42, 45, 52, 54, 123]
+2
+</code></pre><p>&#x4E0D;&#x4FE1;&#x4F60;&#x770B;&#x6E90;&#x7801;</p>
+<pre><code class="lang-python">bisect = bisect_right   <span class="hljs-comment"># backward compatibility</span>
+</code></pre>
+<p>&#x4E00;&#x53E5;&#x8BDD;&#x5C31;&#x53EF;&#x4EE5;&#x89E3;&#x91CA;</p>
+<h2 id="bisectlefta-x-lo0-hinone">bisect_left(a, x, lo=0, hi=None)</h2>
+<p>&#x200B;        &#x2014;&#x2014;&#x5176;&#x76EE;&#x7684;&#x5728;&#x4E8E;&#x67E5;&#x627E;&#x8BE5;&#x6570;&#x503C;&#x5C06;&#x4F1A;&#x63D2;&#x5165;&#x7684;&#x4F4D;&#x7F6E;&#x5E76;&#x8FD4;&#x56DE;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x63D2;&#x5165;&#x3002;&#x5982;&#x679C;x&#x5B58;&#x5728;&#x5728;a&#x4E2D;&#x5219;&#x8FD4;&#x56DE;x&#x5DE6;&#x8FB9;&#x7684;&#x4F4D;&#x7F6E;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> bisect
+
+li = [<span class="hljs-number">1</span>, <span class="hljs-number">23</span>, <span class="hljs-number">45</span>, <span class="hljs-number">12</span>, <span class="hljs-number">23</span>, <span class="hljs-number">42</span>, <span class="hljs-number">54</span>, <span class="hljs-number">123</span>, <span class="hljs-number">14</span>, <span class="hljs-number">52</span>, <span class="hljs-number">3</span>]
+li.sort()
+print(li)
+print(bisect.bisect_left(li, <span class="hljs-number">3</span>))
+</code></pre>
+<pre><code>[1, 3, 12, 14, 23, 23, 42, 45, 52, 54, 123]
+1
+</code></pre><p>&#x6E90;&#x7801;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bisect_left</span><span class="hljs-params">(a, x, lo=<span class="hljs-number">0</span>, hi=None)</span>:</span>
+    <span class="hljs-comment"># a &#x539F;&#x5217;&#x8868;</span>
+    <span class="hljs-comment"># x &#x63D2;&#x5165;&#x7684;&#x5143;&#x7D20;</span>
+    <span class="hljs-comment"># lo &#x8D77;&#x59CB;&#x4F4D;&#x7F6E; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;0</span>
+    <span class="hljs-comment"># hi &#x7ED3;&#x675F;&#x4F4D;&#x7F6E; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;len(a)    </span>
+
+    <span class="hljs-comment"># &#x5982;&#x679C;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5C0F;&#x4E8E;0 &#x5219;&#x62A5;&#x9519;</span>
+    <span class="hljs-keyword">if</span> lo &lt; <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">&apos;lo must be non-negative&apos;</span>)
+    <span class="hljs-comment"># &#x5982;&#x679C;&#x6CA1;&#x6709; &#x7ED3;&#x675F;&#x4F4D;&#x7F6E; &#x5219; &#x9ED8;&#x8BA4;&#x4E3A; &#x5217;&#x8868;&#x7684;&#x957F;&#x5EA6;</span>
+    <span class="hljs-keyword">if</span> hi <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+        hi = len(a)
+    <span class="hljs-comment"># &#x4E8C;&#x5206;&#x6CD5;</span>
+    <span class="hljs-keyword">while</span> lo &lt; hi:
+        mid = (lo+hi)//<span class="hljs-number">2</span>
+        <span class="hljs-keyword">if</span> a[mid] &lt; x: lo = mid+<span class="hljs-number">1</span>
+        <span class="hljs-keyword">else</span>: hi = mid
+    <span class="hljs-comment"># &#x4EC5;&#x8FD4;&#x56DE;&#x4F4D;&#x7F6E;</span>
+    <span class="hljs-keyword">return</span> lo
+</code></pre>
+<h2 id="bisectrighta-x-lo0-hinone">bisect_right(a, x, lo=0, hi=None)</h2>
+<p>&#x200B;        &#x2014;&#x2014;&#x5176;&#x76EE;&#x7684;&#x5728;&#x4E8E;&#x67E5;&#x627E;&#x8BE5;&#x6570;&#x503C;&#x5C06;&#x4F1A;&#x63D2;&#x5165;&#x7684;&#x4F4D;&#x7F6E;&#x5E76;&#x8FD4;&#x56DE;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x63D2;&#x5165;&#x3002;&#x5982;&#x679C;x&#x5B58;&#x5728;&#x5728;a&#x4E2D;&#x5219;&#x8FD4;&#x56DE;x&#x53F3;&#x8FB9;&#x7684;&#x4F4D;&#x7F6E;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> bisect
+
+li = [<span class="hljs-number">1</span>, <span class="hljs-number">23</span>, <span class="hljs-number">45</span>, <span class="hljs-number">12</span>, <span class="hljs-number">23</span>, <span class="hljs-number">42</span>, <span class="hljs-number">54</span>, <span class="hljs-number">123</span>, <span class="hljs-number">14</span>, <span class="hljs-number">52</span>, <span class="hljs-number">3</span>]
+li.sort()
+print(li)
+print(bisect.bisect_right(li, <span class="hljs-number">3</span>))
+</code></pre>
+<pre><code>[1, 3, 12, 14, 23, 23, 42, 45, 52, 54, 123]
+2
+</code></pre><p>&#x6E90;&#x7801;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bisect_right</span><span class="hljs-params">(a, x, lo=<span class="hljs-number">0</span>, hi=None)</span>:</span>
+       <span class="hljs-comment"># a &#x539F;&#x5217;&#x8868;</span>
+    <span class="hljs-comment"># x &#x63D2;&#x5165;&#x7684;&#x5143;&#x7D20;</span>
+    <span class="hljs-comment"># lo &#x8D77;&#x59CB;&#x4F4D;&#x7F6E; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;0</span>
+    <span class="hljs-comment"># hi &#x7ED3;&#x675F;&#x4F4D;&#x7F6E; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;len(a)   </span>
+
+    <span class="hljs-comment"># &#x5982;&#x679C;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5C0F;&#x4E8E;0 &#x5219;&#x62A5;&#x9519;</span>
+    <span class="hljs-keyword">if</span> lo &lt; <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">&apos;lo must be non-negative&apos;</span>)
+    <span class="hljs-comment"># &#x5982;&#x679C;&#x6CA1;&#x6709; &#x7ED3;&#x675F;&#x4F4D;&#x7F6E; &#x5219; &#x9ED8;&#x8BA4;&#x4E3A; &#x5217;&#x8868;&#x7684;&#x957F;&#x5EA6;</span>
+    <span class="hljs-keyword">if</span> hi <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+        hi = len(a)
+    <span class="hljs-comment"># &#x4E8C;&#x5206;&#x6CD5;</span>
+    <span class="hljs-keyword">while</span> lo &lt; hi:
+        mid = (lo+hi)//<span class="hljs-number">2</span>
+        <span class="hljs-keyword">if</span> x &lt; a[mid]: hi = mid
+        <span class="hljs-keyword">else</span>: lo = mid+<span class="hljs-number">1</span>
+    <span class="hljs-comment"># &#x4EC5;&#x8FD4;&#x56DE;&#x4F4D;&#x7F6E;</span>
+    <span class="hljs-keyword">return</span> lo
+</code></pre>
+<h2 id=""> </h2>
+<h2 id="insort">insort</h2>
+<p>&#x200B;        &#x2014;&#x2014; &#x5728;&#x5217;&#x8868;a&#x4E2D;&#x63D2;&#x5165;&#x5143;&#x7D20;x&#xFF0C;&#x5E76;&#x5728;&#x6392;&#x5E8F;&#x540E;&#x4FDD;&#x6301;&#x6392;&#x5E8F;&#x3002;&#x5982;&#x679C;x&#x5DF2;&#x7ECF;&#x5728;a&#x4E2D;&#xFF0C;&#x628A;&#x5B83;&#x63D2;&#x5165;&#x53F3;x&#x7684;&#x53F3;&#x8FB9;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> bisect
+
+li = [<span class="hljs-number">1</span>, <span class="hljs-number">23</span>, <span class="hljs-number">45</span>, <span class="hljs-number">12</span>, <span class="hljs-number">23</span>, <span class="hljs-number">42</span>, <span class="hljs-number">54</span>, <span class="hljs-number">123</span>, <span class="hljs-number">14</span>, <span class="hljs-number">52</span>, <span class="hljs-number">3</span>]
+li.sort()
+print(li)
+bisect.insort(li, <span class="hljs-number">3.0</span>)
+print(li)
+</code></pre>
+<pre><code>[1, 3, 12, 14, 23, 23, 42, 45, 52, 54, 123]
+[1, 3, 3.0, 12, 14, 23, 23, 42, 45, 52, 54, 123]
+</code></pre><p>&#x200B;        &#x2014;&#x2014; &#x5176;&#x5B9E;insort &#x5C31;&#x662F;&#x5728;&#x8C03;&#x7528; insort_right</p>
+<p>&#x4E0D;&#x4FE1;&#x4F60;&#x770B;&#x6E90;&#x7801;</p>
+<pre><code class="lang-python">insort = insort_right   <span class="hljs-comment"># backward compatibility</span>
+</code></pre>
+<p>&#x4E00;&#x53E5;&#x8BDD;&#x5C31;&#x53EF;&#x4EE5;&#x89E3;&#x91CA;</p>
+<h2 id="insortlefta-x-lo0-hinone">insort_left(a, x, lo=0, hi=None)</h2>
+<p>&#x200B;        &#x2014;&#x2014; &#x5728;&#x5217;&#x8868;a&#x4E2D;&#x63D2;&#x5165;&#x5143;&#x7D20;x&#xFF0C;&#x5E76;&#x5728;&#x6392;&#x5E8F;&#x540E;&#x4FDD;&#x6301;&#x6392;&#x5E8F;&#x3002;&#x5982;&#x679C;x&#x5DF2;&#x7ECF;&#x5728;a&#x4E2D;&#xFF0C;&#x628A;&#x5B83;&#x63D2;&#x5165;&#x53F3;x&#x7684;&#x5DE6;&#x8FB9;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> bisect
+
+li = [<span class="hljs-number">1</span>, <span class="hljs-number">23</span>, <span class="hljs-number">45</span>, <span class="hljs-number">12</span>, <span class="hljs-number">23</span>, <span class="hljs-number">42</span>, <span class="hljs-number">54</span>, <span class="hljs-number">123</span>, <span class="hljs-number">14</span>, <span class="hljs-number">52</span>, <span class="hljs-number">3</span>]
+li.sort()
+print(li)
+bisect.insort_left(li, <span class="hljs-number">3.0</span>)
+print(li)
+</code></pre>
+<pre><code>[1, 3, 12, 14, 23, 23, 42, 45, 52, 54, 123]
+[1, 3.0, 3, 12, 14, 23, 23, 42, 45, 52, 54, 123]
+</code></pre><p>&#x6E90;&#x7801;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">insort_left</span><span class="hljs-params">(a, x, lo=<span class="hljs-number">0</span>, hi=None)</span>:</span>
+    <span class="hljs-comment"># a &#x539F;&#x5217;&#x8868;</span>
+    <span class="hljs-comment"># x &#x63D2;&#x5165;&#x7684;&#x5143;&#x7D20;</span>
+    <span class="hljs-comment"># lo &#x8D77;&#x59CB;&#x4F4D;&#x7F6E; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;0</span>
+    <span class="hljs-comment"># hi &#x7ED3;&#x675F;&#x4F4D;&#x7F6E; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;len(a)</span>
+
+    <span class="hljs-comment"># &#x5982;&#x679C;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5C0F;&#x4E8E;0 &#x5219;&#x62A5;&#x9519;</span>
+    <span class="hljs-keyword">if</span> lo &lt; <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">&apos;lo must be non-negative&apos;</span>)
+    <span class="hljs-comment"># &#x5982;&#x679C;&#x6CA1;&#x6709; &#x7ED3;&#x675F;&#x4F4D;&#x7F6E; &#x5219; &#x9ED8;&#x8BA4;&#x4E3A; &#x5217;&#x8868;&#x7684;&#x957F;&#x5EA6;</span>
+    <span class="hljs-keyword">if</span> hi <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+        hi = len(a)
+    <span class="hljs-comment"># &#x4E8C;&#x5206;&#x67E5;&#x627E;</span>
+    <span class="hljs-keyword">while</span> lo &lt; hi:
+        mid = (lo+hi)//<span class="hljs-number">2</span>
+        <span class="hljs-keyword">if</span> a[mid] &lt; x: lo = mid+<span class="hljs-number">1</span>
+        <span class="hljs-keyword">else</span>: hi = mid
+    <span class="hljs-comment"># &#x63D2;&#x5165;</span>
+    a.insert(lo, x)
+</code></pre>
+<h2 id="insortrighta-x-lo0-hinone">insort_right(a, x, lo=0, hi=None)</h2>
+<p>&#x200B;        &#x2014;&#x2014; &#x5728;&#x5217;&#x8868;a&#x4E2D;&#x63D2;&#x5165;&#x5143;&#x7D20;x&#xFF0C;&#x5E76;&#x5728;&#x6392;&#x5E8F;&#x540E;&#x4FDD;&#x6301;&#x6392;&#x5E8F;&#x3002;&#x5982;&#x679C;x&#x5DF2;&#x7ECF;&#x5728;a&#x4E2D;&#xFF0C;&#x628A;&#x5B83;&#x63D2;&#x5165;&#x53F3;x&#x7684;&#x53F3;&#x8FB9;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> bisect
+
+li = [<span class="hljs-number">1</span>, <span class="hljs-number">23</span>, <span class="hljs-number">45</span>, <span class="hljs-number">12</span>, <span class="hljs-number">23</span>, <span class="hljs-number">42</span>, <span class="hljs-number">54</span>, <span class="hljs-number">123</span>, <span class="hljs-number">14</span>, <span class="hljs-number">52</span>, <span class="hljs-number">3</span>]
+li.sort()
+print(li)
+bisect.insort_right(li, <span class="hljs-number">3.0</span>)
+print(li)
+</code></pre>
+<pre><code>[1, 3, 12, 14, 23, 23, 42, 45, 52, 54, 123]
+[1, 3.0, 3, 12, 14, 23, 23, 42, 45, 52, 54, 123]
+</code></pre><p>&#x6E90;&#x7801;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">insort_right</span><span class="hljs-params">(a, x, lo=<span class="hljs-number">0</span>, hi=None)</span>:</span>
+    <span class="hljs-comment"># a &#x539F;&#x5217;&#x8868;</span>
+    <span class="hljs-comment"># x &#x63D2;&#x5165;&#x7684;&#x5143;&#x7D20;</span>
+    <span class="hljs-comment"># lo &#x8D77;&#x59CB;&#x4F4D;&#x7F6E; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;0</span>
+    <span class="hljs-comment"># hi &#x7ED3;&#x675F;&#x4F4D;&#x7F6E; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;len(a)</span>
+
+    <span class="hljs-comment"># &#x5982;&#x679C;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5C0F;&#x4E8E;0 &#x5219;&#x62A5;&#x9519;</span>
+    <span class="hljs-keyword">if</span> lo &lt; <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">&apos;lo must be non-negative&apos;</span>)
+    <span class="hljs-comment"># &#x5982;&#x679C;&#x6CA1;&#x6709; &#x7ED3;&#x675F;&#x4F4D;&#x7F6E; &#x5219; &#x9ED8;&#x8BA4;&#x4E3A; &#x5217;&#x8868;&#x7684;&#x957F;&#x5EA6;</span>
+    <span class="hljs-keyword">if</span> hi <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+        hi = len(a)
+    <span class="hljs-comment"># &#x4E8C;&#x5206;&#x6CD5;&#x67E5;&#x627E; </span>
+    <span class="hljs-keyword">while</span> lo &lt; hi:
+        mid = (lo+hi)//<span class="hljs-number">2</span>
+        <span class="hljs-keyword">if</span> x &lt; a[mid]: hi = mid
+        <span class="hljs-keyword">else</span>: lo = mid+<span class="hljs-number">1</span>
+    <span class="hljs-comment"># &#x63D2;&#x5165;</span>
+    a.insert(lo, x)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01- Python之魅——random.html" class="navigation navigation-prev " aria-label="Previous page:  Python之魅——random">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03- Python之魅——ctypes.html" class="navigation navigation-next " aria-label="Next page:  Python之魅——ctypes">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":" Python之魅——bisect","level":"1.3.2.2","depth":3,"next":{"title":" Python之魅——ctypes","level":"1.3.2.3","depth":3,"path":"01-Python之魅/02-Python Advanced/01-Python 解密/03- Python之魅——ctypes.md","ref":"01-Python之魅/02-Python Advanced/01-Python 解密/03- Python之魅——ctypes.md","articles":[]},"previous":{"title":" Python之魅——random","level":"1.3.2.1","depth":3,"path":"01-Python之魅/02-Python Advanced/01-Python 解密/01- Python之魅——random.md","ref":"01-Python之魅/02-Python Advanced/01-Python 解密/01- Python之魅——random.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","theme-comscore","splitter","-sharing","search"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"splitter":{},"search":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"CharmNight","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":18,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Poppy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"blogs","extension":null},"file":{"path":"01-Python之魅/02-Python Advanced/01-Python 解密/02- Python之魅——bisect.md","mtime":"2018-03-24T15:08:35.878Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-24T15:09:59.335Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

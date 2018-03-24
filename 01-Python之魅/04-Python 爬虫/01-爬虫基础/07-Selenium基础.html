@@ -1,0 +1,1012 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Selenium基础 · Poppy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="CharmNight">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../02-爬虫练习/" />
+    
+    
+    <link rel="prev" href="06-pyquery基础.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../SUMMARY.html">
+            
+                <a href="../../../SUMMARY.html">
+            
+                    
+                    SUMMARY
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Python之魅
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../01-Python Base/">
+            
+                <a href="../../01-Python Base/">
+            
+                    
+                    Python Base
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../01-Python Base/01-Python基础之魔术方法小结.html">
+            
+                <a href="../../01-Python Base/01-Python基础之魔术方法小结.html">
+            
+                    
+                    Python基础之魔术方法小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../02-Python Advanced/">
+            
+                <a href="../../02-Python Advanced/">
+            
+                    
+                    Python Advanced
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../02-Python Advanced/01-Python 解密/01- Python之魅——random.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/01- Python之魅——random.html">
+            
+                    
+                     Python之魅——random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../02-Python Advanced/01-Python 解密/02- Python之魅——bisect.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/02- Python之魅——bisect.html">
+            
+                    
+                     Python之魅——bisect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../02-Python Advanced/01-Python 解密/03- Python之魅——ctypes.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/03- Python之魅——ctypes.html">
+            
+                    
+                     Python之魅——ctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../02-Python Advanced/01-Python 解密/readme.html">
+            
+                <a href="../../02-Python Advanced/01-Python 解密/readme.html">
+            
+                    
+                    readme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../03-Django/">
+            
+                <a href="../../03-Django/">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Python 爬虫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    爬虫基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1.1" data-path="01-爬虫基础概念.html">
+            
+                <a href="01-爬虫基础概念.html">
+            
+                    
+                    爬虫基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.2" data-path="02-Urllib库基础.html">
+            
+                <a href="02-Urllib库基础.html">
+            
+                    
+                    Urllib库基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.3" data-path="03-Requests库.html">
+            
+                <a href="03-Requests库.html">
+            
+                    
+                    Requests库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.4" data-path="04-正则表达式练习.html">
+            
+                <a href="04-正则表达式练习.html">
+            
+                    
+                    正则表达式练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.5" data-path="05-BeautifulSoup基础.html">
+            
+                <a href="05-BeautifulSoup基础.html">
+            
+                    
+                    BeautifulSoup基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.6" data-path="06-pyquery基础.html">
+            
+                <a href="06-pyquery基础.html">
+            
+                    
+                    pyquery基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4.1.7" data-path="07-Selenium基础.html">
+            
+                <a href="07-Selenium基础.html">
+            
+                    
+                    Selenium基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../02-爬虫练习/">
+            
+                <a href="../02-爬虫练习/">
+            
+                    
+                    爬虫练习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.2.1" data-path="../02-爬虫练习/Python爬取百度图库.html">
+            
+                <a href="../02-爬虫练习/Python爬取百度图库.html">
+            
+                    
+                    Python爬取百度图库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2.2" data-path="../02-爬虫练习/selenium小玩具.html">
+            
+                <a href="../02-爬虫练习/selenium小玩具.html">
+            
+                    
+                    selenium小玩具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../02-MySQl数据库/">
+            
+                <a href="../../../02-MySQl数据库/">
+            
+                    
+                    MySQl数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../02-MySQl数据库/01-mysql数据库安装.html">
+            
+                <a href="../../../02-MySQl数据库/01-mysql数据库安装.html">
+            
+                    
+                    mysql数据库安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../02-MySQl数据库/02-mysql数据库基础操作.html">
+            
+                <a href="../../../02-MySQl数据库/02-mysql数据库基础操作.html">
+            
+                    
+                    mysql数据库基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../02-MySQl数据库/03-SQL逻辑查询语句执行顺序.html">
+            
+                <a href="../../../02-MySQl数据库/03-SQL逻辑查询语句执行顺序.html">
+            
+                    
+                    SQL逻辑查询语句执行顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../02-MySQl数据库/04-mysql约束.html">
+            
+                <a href="../../../02-MySQl数据库/04-mysql约束.html">
+            
+                    
+                    mysql约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../../02-MySQl数据库/05-mysql全家桶.html">
+            
+                <a href="../../../02-MySQl数据库/05-mysql全家桶.html">
+            
+                    
+                    mysql全家桶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../../02-MySQl数据库/06-mysql索引.html">
+            
+                <a href="../../../02-MySQl数据库/06-mysql索引.html">
+            
+                    
+                    mysql索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../../02-MySQl数据库/07-mysql慢查询日志.html">
+            
+                <a href="../../../02-MySQl数据库/07-mysql慢查询日志.html">
+            
+                    
+                    mysql慢查询日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Selenium基础</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="selenium">Selenium</h1>
+<p>&#x81EA;&#x52A8;&#x5316;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;&#xFF0C; &#x652F;&#x6301;&#x591A;&#x79CD;&#x6D4F;&#x89C8;&#x5668;&#x3002; &#x722C;&#x866B;&#x4E2D;&#x4E3B;&#x8981;&#x7528;&#x6765;&#x89E3;&#x51B3;JavaScript&#x6E32;&#x67D3;&#x7684;&#x95EE;&#x9898;</p>
+<p>&#x9A71;&#x52A8;&#x6D4F;&#x89C8;&#x5668;&#x6765;&#x505A;&#x5404;&#x79CD;&#x52A8;&#x4F5C;&#xFF08;&#x8DF3;&#x8F6C;&#x3001;&#x67E5;&#x8BE2;&#x3001;&#x2026;&#x2026;&#xFF09;&#x2014;&#x2014;&#x652F;&#x6301;&#x4E3B;&#x6D41;&#x6D4F;&#x89C8;&#x5668;
+&#x6A21;&#x62DF;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#xFF0C;&#x62FF;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x6E32;&#x67D3;&#x540E;&#x7684;&#x9875;&#x9762;</p>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
+<p>pip install selenium</p>
+<h2 id="&#x57FA;&#x672C;&#x4F7F;&#x7528;">&#x57FA;&#x672C;&#x4F7F;&#x7528;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By
+<span class="hljs-keyword">from</span> selenium.webdriver.common.keys <span class="hljs-keyword">import</span> Keys
+<span class="hljs-keyword">from</span> selenium.webdriver.support <span class="hljs-keyword">import</span> expected_conditions <span class="hljs-keyword">as</span> EC
+<span class="hljs-keyword">from</span> selenium.webdriver.support.wait <span class="hljs-keyword">import</span> WebDriverWait
+
+browser = webdriver.Chrome()
+<span class="hljs-keyword">try</span>:
+    browser.get(<span class="hljs-string">&apos;https://www.baidu.com&apos;</span>)
+    input = browser.find_element_by_id(<span class="hljs-string">&apos;kw&apos;</span>) <span class="hljs-comment"># &#x627E;&#x5230;id &#x4E3A;kw&#x7684;&#x952E;</span>
+    input.send_keys(<span class="hljs-string">&apos;Python&apos;</span>) <span class="hljs-comment"># &#x5728;&#x8FD9;&#x4E2A;&#x952E; &#x4E2D;&#x8F93;&#x5165;Python&#x5185;&#x5BB9;</span>
+    input.send_keys(Keys.ENTER) <span class="hljs-comment"># &#x56DE;&#x8F66;</span>
+    wait = WebDriverWait(browser, <span class="hljs-number">10</span>) 
+    wait.until(EC.presence_of_element_located((By.ID,<span class="hljs-string">&apos;content_left&apos;</span>))) <span class="hljs-comment"># &#x7B49;&#x5F85;id&#x4E3A;content_left &#x7684;&#x5185;&#x5BB9;&#x52A0;&#x8F7D;&#x5B8C;&#x6BD5;</span>
+    print(browser.current_url) <span class="hljs-comment"># &#x6253;&#x5370;url</span>
+    print(browser.get_cookies()) <span class="hljs-comment"># &#x6253;&#x5370;cookies</span>
+    print(browser.page_source) <span class="hljs-comment"># &#x6253;&#x5370;&#x6E90;&#x4EE3;&#x7801;</span>
+<span class="hljs-keyword">finally</span>:
+    browser.close() <span class="hljs-comment"># &#x5173;&#x95ED;&#x9875;&#x9762;</span>
+</code></pre>
+<h3 id="&#x58F0;&#x660E;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;">&#x58F0;&#x660E;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+browser = webdriver.Chrome() <span class="hljs-comment"># &#x58F0;&#x660E;&#x4E00;&#x4E2A;CHrome&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;</span>
+browser = webdriver.Firefox() <span class="hljs-comment"># &#x58F0;&#x660E;</span>
+browser = webdriver.Edge()
+browser = webdriver.PhantomJS()
+browser = webdriver.Safari()
+</code></pre>
+<h3 id="&#x8BBF;&#x95EE;&#x9875;&#x9762;">&#x8BBF;&#x95EE;&#x9875;&#x9762;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+browser = webdriver.Chrome()
+browser.get(<span class="hljs-string">&apos;https://www.taobao.com&apos;</span>)
+print(browser.page_source)
+browser.close()
+</code></pre>
+<p>&#x200B;    </p>
+<h3 id="&#x67E5;&#x627E;&#x5143;&#x7D20;">&#x67E5;&#x627E;&#x5143;&#x7D20;</h3>
+<h4 id="&#x5355;&#x4E2A;&#x5143;&#x7D20;">&#x5355;&#x4E2A;&#x5143;&#x7D20;</h4>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+browser = webdriver.Chrome()
+browser.get(<span class="hljs-string">&apos;https://www.taobao.com&apos;</span>)
+input_first = browser.find_element_by_id(<span class="hljs-string">&apos;q&apos;</span>)
+input_second = browser.find_element_by_css_selector(<span class="hljs-string">&apos;#q&apos;</span>)
+input_third = browser.find_element_by_xpath(<span class="hljs-string">&apos;//*[@id=&quot;q&quot;]&apos;</span>)
+print(input_first, input_second, input_third)
+browser.close()
+</code></pre>
+<pre><code>&lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;140e689c70a2e97e1c01ae7b5e54a03c&quot;, element=&quot;0.9239366371945823-1&quot;)&gt; &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;140e689c70a2e97e1c01ae7b5e54a03c&quot;, element=&quot;0.9239366371945823-1&quot;)&gt; &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;140e689c70a2e97e1c01ae7b5e54a03c&quot;, element=&quot;0.9239366371945823-1&quot;)&gt;
+</code></pre><p>&#x200B;    </p>
+<ul>
+<li>find_element_by_name</li>
+<li>find_element_by_xpath</li>
+<li>find_element_by_link_text</li>
+<li>find_element_by_tag_name</li>
+<li>find_element_by_class_name</li>
+<li>find_element_by_css_selector</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By
+
+browser = webdriver.Chrome()
+browser.get(<span class="hljs-string">&apos;https://www.taobao.com&apos;</span>)
+input_first = browser.find_element(By.ID, <span class="hljs-string">&apos;q&apos;</span>)
+print(input_first)
+browser.close()
+</code></pre>
+<pre><code>&lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2b9165a8730071b1c3b342eadb33f37d&quot;, element=&quot;0.26846444387513646-1&quot;)&gt;
+</code></pre><p>&#x200B;    </p>
+<h4 id="&#x591A;&#x4E2A;&#x5143;&#x7D20;">&#x591A;&#x4E2A;&#x5143;&#x7D20;</h4>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+browser = webdriver.Chrome()
+browser.get(<span class="hljs-string">&apos;https://www.taobao.com&apos;</span>)
+lis = browser.find_elements_by_css_selector(<span class="hljs-string">&apos;.service-bd li&apos;</span>)
+print(lis)
+browser.close()
+</code></pre>
+<pre><code>[&lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-1&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-2&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-3&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-4&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-5&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-6&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-7&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-8&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-9&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-10&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-11&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-12&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-13&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-14&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-15&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;ece0ac0a8bc7840faaf9fa5b2537c35d&quot;, element=&quot;0.5686549757453516-16&quot;)&gt;]
+</code></pre><p>&#x200B;    </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By
+
+browser = webdriver.Chrome()
+browser.get(<span class="hljs-string">&apos;https://www.taobao.com&apos;</span>)
+lis = browser.find_elements(By.CSS_SELECTOR, <span class="hljs-string">&apos;.service-bd li&apos;</span>)
+print(lis)
+browser.close()
+</code></pre>
+<pre><code>[&lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-1&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-2&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-3&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-4&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-5&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-6&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-7&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-8&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-9&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-10&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-11&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-12&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-13&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-14&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-15&quot;)&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2fd570f9d8e1015e3b8dc935542db219&quot;, element=&quot;0.36423297915728003-16&quot;)&gt;]
+</code></pre><p>&#x200B;    </p>
+<ul>
+<li>find_elements_by_name</li>
+<li>find_elements_by_xpath</li>
+<li>find_elements_by_link_text</li>
+<li>find_elements_by_partial_link_text</li>
+<li>find_elements_by_tag_name</li>
+<li>find_elements_by_class_name</li>
+<li>find_elements_by_css_selector</li>
+</ul>
+<h3 id="&#x5143;&#x7D20;&#x4EA4;&#x4E92;&#x64CD;&#x4F5C;">&#x5143;&#x7D20;&#x4EA4;&#x4E92;&#x64CD;&#x4F5C;</h3>
+<p>&#x5BF9;&#x83B7;&#x53D6;&#x7684;&#x5143;&#x7D20;&#x8C03;&#x7528;&#x4EA4;&#x4E92;&#x65B9;&#x6CD5;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">import</span> time
+]
+browser = webdriver.Chrome()
+browser.get(<span class="hljs-string">&apos;https://www.taobao.com&apos;</span>)
+input = browser.find_element_by_id(<span class="hljs-string">&apos;q&apos;</span>)
+input.send_keys(<span class="hljs-string">&apos;iPhone&apos;</span>)
+time.sleep(<span class="hljs-number">5</span>)
+input.clear()
+input.send_keys(<span class="hljs-string">&apos;iPad&apos;</span>)
+button = browser.find_element_by_class_name(<span class="hljs-string">&apos;btn-search&apos;</span>)
+button.click()
+</code></pre>
+<h3 id="&#x4EA4;&#x4E92;&#x52A8;&#x4F5C;">&#x4EA4;&#x4E92;&#x52A8;&#x4F5C;</h3>
+<p>&#x5C06;&#x52A8;&#x4F5C;&#x9644;&#x52A0;&#x5230;&#x52A8;&#x4F5C;&#x94FE;&#x4E2D;&#x4E32;&#x884C;&#x6267;&#x884C;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">from</span> selenium.webdriver <span class="hljs-keyword">import</span> ActionChains
+
+browser = webdriver.Chrome()
+url = <span class="hljs-string">&apos;http://www.runoob.com/try/try.php?filename=jqueryui-api-droppable&apos;</span>
+browser.get(url)
+browser.switch_to.frame(<span class="hljs-string">&apos;iframeResult&apos;</span>)
+source = browser.find_element_by_css_selector(<span class="hljs-string">&apos;#draggable&apos;</span>)
+target = browser.find_element_by_css_selector(<span class="hljs-string">&apos;#droppable&apos;</span>)
+actions = ActionChains(browser)
+actions.drag_and_drop(source, target)
+actions.perform()
+</code></pre>
+<h3 id="&#x6267;&#x884C;javascript">&#x6267;&#x884C;JavaScript</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+browser = webdriver.Chrome()
+browser.get(<span class="hljs-string">&apos;https://www.zhihu.com/explore&apos;</span>)
+browser.execute_script(<span class="hljs-string">&apos;window.scrollTo(0, document.body.scrollHeight)&apos;</span>)
+browser.execute_script(<span class="hljs-string">&apos;alert(&quot;To Bottom&quot;)&apos;</span>)
+</code></pre>
+<h2 id="&#x83B7;&#x53D6;&#x5143;&#x7D20;&#x4FE1;&#x606F;">&#x83B7;&#x53D6;&#x5143;&#x7D20;&#x4FE1;&#x606F;</h2>
+<h3 id="&#x83B7;&#x53D6;&#x5C5E;&#x6027;">&#x83B7;&#x53D6;&#x5C5E;&#x6027;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">from</span> selenium.webdriver <span class="hljs-keyword">import</span> ActionChains
+
+browser = webdriver.Chrome()
+url = <span class="hljs-string">&apos;https://www.zhihu.com/explore&apos;</span>
+browser.get(url)
+logo = browser.find_element_by_id(<span class="hljs-string">&apos;zh-top-link-logo&apos;</span>)
+print(logo)
+print(logo.get_attribute(<span class="hljs-string">&apos;class&apos;</span>))
+</code></pre>
+<pre><code>&lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;dbcb58c81f345e6baefe14f449a81559&quot;, element=&quot;0.23926475887966325-1&quot;)&gt;
+zu-top-link-logo
+</code></pre><h3 id="&#x83B7;&#x53D6;&#x6587;&#x672C;&#x503C;">&#x83B7;&#x53D6;&#x6587;&#x672C;&#x503C;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+browser = webdriver.Chrome()
+url = <span class="hljs-string">&apos;https://www.zhihu.com/explore&apos;</span>
+browser.get(url)
+input = browser.find_element_by_class_name(<span class="hljs-string">&apos;zu-top-add-question&apos;</span>)
+print(input.text)
+</code></pre>
+<pre><code>&#x63D0;&#x95EE;
+</code></pre><p>&#x200B;    </p>
+<h3 id="&#x83B7;&#x53D6;id&#x3001;&#x4F4D;&#x7F6E;&#x3001;&#x6807;&#x7B7E;&#x540D;&#x3001;&#x5927;&#x5C0F;">&#x83B7;&#x53D6;ID&#x3001;&#x4F4D;&#x7F6E;&#x3001;&#x6807;&#x7B7E;&#x540D;&#x3001;&#x5927;&#x5C0F;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+browser = webdriver.Chrome()
+url = <span class="hljs-string">&apos;https://www.zhihu.com/explore&apos;</span>
+browser.get(url)
+input = browser.find_element_by_class_name(<span class="hljs-string">&apos;zu-top-add-question&apos;</span>)
+print(input.id)
+print(input.location)
+print(input.tag_name)
+print(input.size)
+</code></pre>
+<pre><code>0.6622234120324215-1
+{&apos;x&apos;: 758, &apos;y&apos;: 7}
+button
+{&apos;height&apos;: 32, &apos;width&apos;: 66}
+</code></pre><h3 id="frame">Frame</h3>
+<p>&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x7F51;&#x9875;&#x5D4C;&#x5165;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x7236;&#x7EA7;Frame&#x60F3;&#x67E5;&#x627E;&#x5B50;&#x7EA7;Frame &#x5FC5;&#x987B;&#x5C06;&#x9875;&#x9762;&#x5207;&#x6362;&#x5230;&#x5B50;&#x7EA7;Frame &#x624D;&#x80FD;&#x8FDB;&#x884C;&#x67E5;&#x627E;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">from</span> selenium.common.exceptions <span class="hljs-keyword">import</span> NoSuchElementException
+
+browser = webdriver.Chrome()
+url = <span class="hljs-string">&apos;http://www.runoob.com/try/try.php?filename=jqueryui-api-droppable&apos;</span>
+browser.get(url)
+browser.switch_to.frame(<span class="hljs-string">&apos;iframeResult&apos;</span>)
+source = browser.find_element_by_css_selector(<span class="hljs-string">&apos;#draggable&apos;</span>)
+print(source)
+<span class="hljs-keyword">try</span>:
+    logo = browser.find_element_by_class_name(<span class="hljs-string">&apos;logo&apos;</span>)
+<span class="hljs-keyword">except</span> NoSuchElementException:
+    print(<span class="hljs-string">&apos;No Logo&apos;</span>)
+browser.switch_to.parent_frame()
+logo = browser.find_element_by_class_name(<span class="hljs-string">&apos;logo&apos;</span>)
+print(logo)
+print(logo.text)
+print(logo.get_attribute(<span class="hljs-string">&apos;class&apos;</span>))
+</code></pre>
+<pre><code>&lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;3babf5d126171225ac7e648935c6cdbc&quot;, element=&quot;0.5865806992227736-1&quot;)&gt;
+No Logo
+&lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;3babf5d126171225ac7e648935c6cdbc&quot;, element=&quot;0.8736718201387208-2&quot;)&gt;
+RUNOOB.COM
+navbar-header logo
+</code></pre><h2 id="&#x7B49;&#x5F85;">&#x7B49;&#x5F85;</h2>
+<h3 id="&#x9690;&#x5F0F;&#x7B49;&#x5F85;">&#x9690;&#x5F0F;&#x7B49;&#x5F85;</h3>
+<p>&#x5F53;&#x4F7F;&#x7528;&#x4E86;&#x9690;&#x5F0F;&#x7B49;&#x5F85;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;WebDriver&#x6CA1;&#x6709;&#x5728;DOM&#x4E2D;&#x627E;&#x5230;&#x5143;&#x7D20;&#xFF0C;&#x5C06;&#x7EE7;&#x7EED;&#x7B49;&#x5F85;&#xFF0C;&#x8D85;&#x51FA;&#x8BBE;&#x5B9A;&#x65F6;&#x95F4;&#x540E;&#x5219;&#x629B;&#x51FA;&#x627E;&#x4E0D;&#x5230;&#x5143;&#x7D20;&#x5F02;&#x5E38;&#xFF0C;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#x5F53;&#x67E5;&#x627E;&#x5143;&#x7D20;&#x6216;&#x5143;&#x7D20;&#x6CA1;&#x6709;&#x7ACB;&#x5373;&#x51FA;&#x73B0;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9690;&#x5F0F;&#x7B49;&#x5F85;&#x5C06;&#x7B49;&#x5F85;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x518D;&#x67E5;&#x627E;DOM&#xFF0C;&#x9ED8;&#x8BA4;&#x65F6;&#x95F4;&#x4E3A;0</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+browser = webdriver.Chrome()
+browser.implicitly_wait(<span class="hljs-number">10</span>)
+browser.get(<span class="hljs-string">&apos;https://zhihu.com/explore&apos;</span>)
+input = browser.find_element_by_class_name(<span class="hljs-string">&apos;zu-top-add-question&apos;</span>)
+print(input)
+</code></pre>
+<pre><code>&lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;50f05e319852de6a485f641d13b4c35a&quot;, element=&quot;0.22632707900120286-1&quot;)&gt;
+</code></pre><p>&#x200B;    </p>
+<h3 id="&#x663E;&#x793A;&#x7B49;&#x5F85;">&#x663E;&#x793A;&#x7B49;&#x5F85;</h3>
+<p>&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x7B49;&#x5F85;&#x6761;&#x4EF6;&#x548C;&#x6700;&#x957F;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#xFF0C;&#x4F1A;&#x5728;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#x4E2D;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x662F;&#x5426;&#x6210;&#x7ACB;&#xFF0C;&#x5982;&#x679C;&#x6210;&#x7ACB;&#x5219;&#x4F1A;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6210;&#x7ACB;&#x5219;&#x4F1A;&#x4E00;&#x76F4;&#x7B49;&#x5F85;&#xFF0C;&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x7B49;&#x5F85;&#x65F6;&#x95F4; &#x5219;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By
+<span class="hljs-keyword">from</span> selenium.webdriver.support.ui <span class="hljs-keyword">import</span> WebDriverWait
+<span class="hljs-keyword">from</span> selenium.webdriver.support <span class="hljs-keyword">import</span> expected_conditions <span class="hljs-keyword">as</span> EC
+
+browser = webdriver.Chrome()
+browser.get(<span class="hljs-string">&apos;https://www.taobao.com&apos;</span>)
+wait = WebDriverWait(browser, <span class="hljs-number">10</span>)
+input = wait.until(EC.presence_of_element_located((By.ID,<span class="hljs-string">&apos;q&apos;</span>)))
+button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR,<span class="hljs-string">&apos;.btn-search&apos;</span>)))
+print(input, button)
+</code></pre>
+<pre><code>&lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;72a244279181ef8f8e2c9157bd8e64a6&quot;, element=&quot;0.7878713628776868-1&quot;)&gt; &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;72a244279181ef8f8e2c9157bd8e64a6&quot;, element=&quot;0.7878713628776868-2&quot;)&gt;
+</code></pre><p>&#x200B;    </p>
+<ul>
+<li>title_is &#x6807;&#x9898;&#x662F;&#x67D0;&#x5185;&#x5BB9;</li>
+<li>title_contains &#x6807;&#x9898;&#x5305;&#x542B;&#x67D0;&#x5185;&#x5BB9;</li>
+<li>presence_of_element_located &#x5143;&#x7D20;&#x52A0;&#x8F7D;&#x51FA;&#xFF0C;&#x4F20;&#x5165;&#x5B9A;&#x4F4D;&#x5143;&#x7EC4;&#xFF0C; &#x5982;&#xFF08;By.ID,&apos;p&apos;&#xFF09;</li>
+<li>visibility_of_element_located &#x5143;&#x7D20;&#x53EF;&#x89C1;&#xFF0C;&#x4F20;&#x5165;&#x5B9A;&#x4F4D;&#x5143;&#x7EC4;</li>
+<li>visibility_of &#x53EF;&#x89C1;&#xFF0C; &#x4F20;&#x5165;&#x5143;&#x7D20;&#x5BF9;&#x8C61;</li>
+<li>presence_of_all_elements_located &#x6240;&#x6709;&#x5143;&#x7D20;&#x52A0;&#x8F7D;&#x51FA;</li>
+<li>text_to_be_present_in_element &#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x6587;&#x672C;&#x5305;&#x542B;&#x67D0;&#x6587;&#x5B57;</li>
+<li>text_to_be_present_in_element_value &#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x5305;&#x542B;&#x67D0;&#x6587;&#x5B57;</li>
+<li>frame_to_be_available_and_switch_to_it frame&#x52A0;&#x8F7D;&#x5E76;&#x5207;&#x6362;</li>
+<li>invisibility_of_element_located &#x5143;&#x7D20;&#x4E0D;&#x53EF;&#x89C1;</li>
+<li>element_to_be_clickable &#x5143;&#x7D20;&#x53EF;&#x70B9;&#x51FB;</li>
+<li>staleness_of &#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x5426;&#x4ECD;&#x5728;DOM&#xFF0C;&#x53EF;&#x5224;&#x65AD;&#x9875;&#x9762;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5237;&#x65B0;</li>
+<li>element_to_be_selected &#x5143;&#x7D20;&#x53EF;&#x9009;&#x62E9;&#xFF0C;&#x4F20;&#x5143;&#x7D20;&#x5BF9;&#x8C61;</li>
+<li>element_located_to_be_selected &#x5143;&#x7D20;&#x53EF;&#x9009;&#x62E9;&#xFF0C;&#x4F20;&#x5B9A;&#x4F4D;&#x5143;&#x7EC4;</li>
+<li>element_selection_state_to_be &#x4F20;&#x5165;&#x5143;&#x7D20;&#x5BF9;&#x8C61;&#x53CA;&#x72B6;&#x6001;&#xFF0C;&#x76F8;&#x7B49;&#x8FD4;&#x56DE;Ture&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;False</li>
+<li>alert_is_present &#x662F;&#x5426;&#x51FA;&#x73B0;Alert</li>
+</ul>
+<h2 id="&#x524D;&#x8FDB;&#x540E;&#x9000;">&#x524D;&#x8FDB;&#x540E;&#x9000;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+browser = webdriver.Chrome()
+browser.get(<span class="hljs-string">&apos;https://www.baidu.com&apos;</span>)
+browser.get(<span class="hljs-string">&apos;https://www.taobao.com&apos;</span>)
+browser.get(<span class="hljs-string">&apos;https://www.python.org&apos;</span>)
+browser.back()
+time.sleep(<span class="hljs-number">10</span>)
+browser.forward()
+time.sleep(<span class="hljs-number">10</span>)
+browser.close()
+</code></pre>
+<h2 id="cookies">Cookies</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+browser = webdriver.Chrome()
+browser.get(<span class="hljs-string">&apos;https://www.zhihu.com/explore&apos;</span>)
+print(browser.get_cookies())
+browser.add_cookie({<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;domain&apos;</span>: <span class="hljs-string">&apos;www.zhihu.com&apos;</span>,<span class="hljs-string">&apos;value&apos;</span>: <span class="hljs-string">&apos;Night&apos;</span>})
+print(browser.get_cookies())
+browser.delete_all_cookies()
+print(browser.get_cookies())
+</code></pre>
+<h2 id="&#x7BA1;&#x7406;&#x9009;&#x9879;&#x5361;">&#x7BA1;&#x7406;&#x9009;&#x9879;&#x5361;</h2>
+<p>&#x901A;&#x8FC7;js&#x624B;&#x52A8;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x65B0;&#x9875;&#x9762;
+&#x7136;&#x540E;&#x901A;&#x8FC7; browser.switch_to_window() &#x8DF3;&#x8F6C; &#x9009;&#x9879;&#x5361;
+&#x5728;&#x6253;&#x5F00;&#x9875;&#x9762;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+browser = webdriver.Chrome()
+browser.get(<span class="hljs-string">&apos;https://www.baidu.com&apos;</span>)
+browser.execute_script(<span class="hljs-string">&apos;window.open()&apos;</span>)
+print(browser.window_handles)
+browser.switch_to_window(browser.window_handles[<span class="hljs-number">1</span>]) <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x9009;&#x9879;&#x5361;</span>
+browser.get(<span class="hljs-string">&apos;https://www.taobao.com&apos;</span>)
+time.sleep(<span class="hljs-number">1</span>)
+browser.switch_to_window(browser.window_handles[<span class="hljs-number">0</span>])
+browser.get(<span class="hljs-string">&apos;https://python.org&apos;</span>)
+</code></pre>
+<pre><code>[&apos;CDwindow-(5C5B79F87A42E4CA1B11BC99B5F22E82)&apos;, &apos;CDwindow-(AC524DF290CE5D4847C861BDA5A0978)&apos;]
+</code></pre><p>&#x200B;    </p>
+<h2 id="&#x5F02;&#x5E38;&#x5904;&#x7406;">&#x5F02;&#x5E38;&#x5904;&#x7406;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+
+browser = webdriver.Chrome()
+browser.get(<span class="hljs-string">&apos;https://www.baidu.com&apos;</span>)
+browser.find_element_by_id(<span class="hljs-string">&apos;hello&apos;</span>)
+</code></pre>
+<pre><code>NoSuchElementException: Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;hello&quot;}
+</code></pre><pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">from</span> selenium.common.exceptions <span class="hljs-keyword">import</span> TimeoutException, NoSuchElementException
+
+browser = webdriver.Chrome()
+<span class="hljs-keyword">try</span>:
+    browser.get(<span class="hljs-string">&apos;https://www.baidu.com&apos;</span>)
+<span class="hljs-keyword">except</span> TimeoutException:
+    print(<span class="hljs-string">&apos;Time Out&apos;</span>)
+
+<span class="hljs-keyword">try</span>:
+    browser.find_element_by_id(<span class="hljs-string">&apos;hello&apos;</span>)
+<span class="hljs-keyword">except</span> NoSuchElementException:
+    print(<span class="hljs-string">&apos;No Element&apos;</span>)
+<span class="hljs-keyword">finally</span>:
+    browser.close()
+</code></pre>
+<pre><code>No Element
+</code></pre><p>&#x200B;    </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06-pyquery基础.html" class="navigation navigation-prev " aria-label="Previous page: pyquery基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../02-爬虫练习/" class="navigation navigation-next " aria-label="Next page: 爬虫练习">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Selenium基础","level":"1.3.4.1.7","depth":4,"next":{"title":"爬虫练习","level":"1.3.4.2","depth":3,"path":"01-Python之魅/04-Python 爬虫/02-爬虫练习/README.md","ref":"01-Python之魅/04-Python 爬虫/02-爬虫练习/README.md","articles":[{"title":"Python爬取百度图库","level":"1.3.4.2.1","depth":4,"path":"01-Python之魅/04-Python 爬虫/02-爬虫练习/Python爬取百度图库.md","ref":"01-Python之魅/04-Python 爬虫/02-爬虫练习/Python爬取百度图库.md","articles":[]},{"title":"selenium小玩具","level":"1.3.4.2.2","depth":4,"path":"01-Python之魅/04-Python 爬虫/02-爬虫练习/selenium小玩具.md","ref":"01-Python之魅/04-Python 爬虫/02-爬虫练习/selenium小玩具.md","articles":[]}]},"previous":{"title":"pyquery基础","level":"1.3.4.1.6","depth":4,"path":"01-Python之魅/04-Python 爬虫/01-爬虫基础/06-pyquery基础.md","ref":"01-Python之魅/04-Python 爬虫/01-爬虫基础/06-pyquery基础.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","theme-comscore","splitter","-sharing","search"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"splitter":{},"search":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"CharmNight","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":18,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Poppy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"blogs","extension":null},"file":{"path":"01-Python之魅/04-Python 爬虫/01-爬虫基础/07-Selenium基础.md","mtime":"2018-03-24T15:08:35.878Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-24T15:09:59.335Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
